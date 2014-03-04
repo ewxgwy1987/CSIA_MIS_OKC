@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ToolsVersion="2.0">
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <DataSources>
+    <ProjectItem>
+      <Name>IRELBHSDB.rds</Name>
+      <FullPath>IRELBHSDB.rds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSets />
+  <Reports>
+    <ProjectItem>
+      <Name>01 ThroughputReport.rdl</Name>
+      <FullPath>01 ThroughputReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>02 EquipOperationalSummary.rdl</Name>
+      <FullPath>02 EquipOperationalSummary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>03 EquipmentMalfunctionandCorrectionReport.rdl</Name>
+      <FullPath>03 EquipmentMalfunctionandCorrectionReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>04 SystemCommunicationBehavior.rdl</Name>
+      <FullPath>04 SystemCommunicationBehavior.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>05 FlightSummaryReport.rdl</Name>
+      <FullPath>05 FlightSummaryReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>06 BagTagTableReport.rdl</Name>
+      <FullPath>06 BagTagTableReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>07 MES Report.rdl</Name>
+      <FullPath>07 MES Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>08 RunoutReport.rdl</Name>
+      <FullPath>08 RunoutReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>09 IndivEDSStatusReport.rdl</Name>
+      <FullPath>09 IndivEDSStatusReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>10 ATRReport.rdl</Name>
+      <FullPath>10 ATRReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>11 DayEndReport.rdl</Name>
+      <FullPath>11 DayEndReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>14 SortAreaAssignmentReport.rdl</Name>
+      <FullPath>14 SortAreaAssignmentReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>15 BSMReport.rdl</Name>
+      <FullPath>15 BSMReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>16 ComputerAndPLCStatusReport.rdl</Name>
+      <FullPath>16 ComputerAndPLCStatusReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>17 IndivPLCStatusReport.rdl</Name>
+      <FullPath>17 IndivPLCStatusReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>18 BagDataReport.rdl</Name>
+      <FullPath>18 BagDataReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>19 EDSStatisticsReport.rdl</Name>
+      <FullPath>19 EDSStatisticsReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>20 CriticalTrackingPECReport.rdl</Name>
+      <FullPath>20 CriticalTrackingPECReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>21 PECTrackingStatisticsReport.rdl</Name>
+      <FullPath>21 PECTrackingStatisticsReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>22 TrackingStatisticsReport.rdl</Name>
+      <FullPath>22 TrackingStatisticsReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>23 BaggageDimensioningStatisticsReport.rdl</Name>
+      <FullPath>23 BaggageDimensioningStatisticsReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>24 OSRStatisticsReport.rdl</Name>
+      <FullPath>24 OSRStatisticsReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>25 CBRAStatistics.rdl</Name>
+      <FullPath>25 CBRAStatistics.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>26 BagTagNotFoundReport.rdl</Name>
+      <FullPath>26 BagTagNotFoundReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>99-2 EquipmentOperationalSummaryReport.rdl</Name>
+      <FullPath>99-2 EquipmentOperationalSummaryReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagForPier.rdl</Name>
+      <FullPath>BagForPier.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BaggageJamStatistic2.rdl</Name>
+      <FullPath>BaggageJamStatistic2.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BaggageJamStatisticReport(Maintenance).rdl</Name>
+      <FullPath>BaggageJamStatisticReport(Maintenance).rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BaggageJamStatisticReport(Operation).rdl</Name>
+      <FullPath>BaggageJamStatisticReport(Operation).rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BaggageMeasuringStatistics.rdl</Name>
+      <FullPath>BaggageMeasuringStatistics.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BaggageRoutingReport.rdl</Name>
+      <FullPath>BaggageRoutingReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BaggageTag.rdl</Name>
+      <FullPath>BaggageTag.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BaggageTagByGID.rdl</Name>
+      <FullPath>BaggageTagByGID.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagInputReport.rdl</Name>
+      <FullPath>BagInputReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagSearchReport.rdl</Name>
+      <FullPath>BagSearchReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagSortationReport(Details).rdl</Name>
+      <FullPath>BagSortationReport(Details).rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagSortationReport(Summary).rdl</Name>
+      <FullPath>BagSortationReport(Summary).rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagSortReport.rdl</Name>
+      <FullPath>BagSortReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagTagNotFoundReport.rdl</Name>
+      <FullPath>BagTagNotFoundReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagTagReport.rdl</Name>
+      <FullPath>BagTagReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagTraceAll.rdl</Name>
+      <FullPath>BagTraceAll.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagTraceByBSM.rdl</Name>
+      <FullPath>BagTraceByBSM.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagTraceByGID.rdl</Name>
+      <FullPath>BagTraceByGID.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BagTraceReport.rdl</Name>
+      <FullPath>BagTraceReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>BSMReport.rdl</Name>
+      <FullPath>BSMReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Carrier.rdl</Name>
+      <FullPath>Carrier.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CBRAStatistics.rdl</Name>
+      <FullPath>CBRAStatistics.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ComputerandPLCStatusReport.rdl</Name>
+      <FullPath>ComputerandPLCStatusReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CriticalTrackingPEC.rdl</Name>
+      <FullPath>CriticalTrackingPEC.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DailyCBISExecutiveSummary.rdl</Name>
+      <FullPath>DailyCBISExecutiveSummary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DailyCBISReliability.rdl</Name>
+      <FullPath>DailyCBISReliability.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DailyCBISScreening.rdl</Name>
+      <FullPath>DailyCBISScreening.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DailyCBISSummary.rdl</Name>
+      <FullPath>DailyCBISSummary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DailyCBISVolume.rdl</Name>
+      <FullPath>DailyCBISVolume.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DayEndReport.rdl</Name>
+      <FullPath>DayEndReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Default.rdl</Name>
+      <FullPath>Default.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>EDSBagActivities.rdl</Name>
+      <FullPath>EDSBagActivities.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>EDSEndOfDay.rdl</Name>
+      <FullPath>EDSEndOfDay.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>EDSStatistics.rdl</Name>
+      <FullPath>EDSStatistics.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Equipment.rdl</Name>
+      <FullPath>Equipment.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>EquipmentMalfunctionandCorrectionReport.rdl</Name>
+      <FullPath>EquipmentMalfunctionandCorrectionReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>EquipmentOperationalSummaryReport.rdl</Name>
+      <FullPath>EquipmentOperationalSummaryReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>EquipmentReport.rdl</Name>
+      <FullPath>EquipmentReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>EquipmentTrackingAccuracyReport.rdl</Name>
+      <FullPath>EquipmentTrackingAccuracyReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FaultLog.rdl</Name>
+      <FullPath>FaultLog.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FlightBagCountReport.rdl</Name>
+      <FullPath>FlightBagCountReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FlightSummaryandCloseoutReport.rdl</Name>
+      <FullPath>FlightSummaryandCloseoutReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FlightTableDataReport(Arrival).rdl</Name>
+      <FullPath>FlightTableDataReport(Arrival).rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FlightTableDataReport(Departure).rdl</Name>
+      <FullPath>FlightTableDataReport(Departure).rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HBSProcessReport.rdl</Name>
+      <FullPath>HBSProcessReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HBSSortingReport.rdl</Name>
+      <FullPath>HBSSortingReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HistoryAlarm.rdl</Name>
+      <FullPath>HistoryAlarm.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>IndividualPLCStatusReport.rdl</Name>
+      <FullPath>IndividualPLCStatusReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>JamStatistic.rdl</Name>
+      <FullPath>JamStatistic.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ManualEncode.rdl</Name>
+      <FullPath>ManualEncode.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MESUtilizationReport.rdl</Name>
+      <FullPath>MESUtilizationReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NewCarrier.rdl</Name>
+      <FullPath>NewCarrier.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NewScannerArray.rdl</Name>
+      <FullPath>NewScannerArray.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>OSRStatistics.rdl</Name>
+      <FullPath>OSRStatistics.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>OutOfGauge.rdl</Name>
+      <FullPath>OutOfGauge.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PierTag.rdl</Name>
+      <FullPath>PierTag.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Run-outReport.rdl</Name>
+      <FullPath>Run-outReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ScannerArray.rdl</Name>
+      <FullPath>ScannerArray.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ShaftEncoder.rdl</Name>
+      <FullPath>ShaftEncoder.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SortAreaAssignmentReport.rdl</Name>
+      <FullPath>SortAreaAssignmentReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SortDeviceAssignment.rdl</Name>
+      <FullPath>SortDeviceAssignment.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SortingDevice.rdl</Name>
+      <FullPath>SortingDevice.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SortMakeUp.rdl</Name>
+      <FullPath>SortMakeUp.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>testatr.rdl</Name>
+      <FullPath>testatr.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ThroughputReport.rdl</Name>
+      <FullPath>ThroughputReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TrackedPhotocell.rdl</Name>
+      <FullPath>TrackedPhotocell.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Z 25 CBRAStatistics.rdl</Name>
+      <FullPath>Z 25 CBRAStatistics.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>13 PermanentFlightReport .rdl</Name>
+      <FullPath>13 PermanentFlightReport .rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>12 ActiveFlightReport.rdl</Name>
+      <FullPath>12 ActiveFlightReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Z OLD_06 BagTagTableReport.rdl</Name>
+      <FullPath>Z OLD_06 BagTagTableReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Z OLD_18 BagDataReport.rdl</Name>
+      <FullPath>Z OLD_18 BagDataReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Z OLD_01 ThroughputReport.rdl</Name>
+      <FullPath>Z OLD_01 ThroughputReport.rdl</FullPath>
+    </ProjectItem>
+  </Reports>
+  <Configurations>
+    <Configuration>
+      <Name>Debug</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <OutputPath>bin\Debug</OutputPath>
+        <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+        <TargetServerURL>http://sacdb/ReportServer</TargetServerURL>
+        <TargetFolder>BHSReports</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <OverwriteDataSources>true</OverwriteDataSources>
+        <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+        <OverwriteDatasets>true</OverwriteDatasets>
+        <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+        <StartItem>01 ThroughputReport.rdl</StartItem>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>DebugLocal</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <OutputPath>bin\DebugLocal</OutputPath>
+        <TargetServerVersion>SSRS2008</TargetServerVersion>
+        <TargetFolder>Calgary_Report</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Release</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <OutputPath>bin\Release</OutputPath>
+        <TargetServerVersion>SSRS2008</TargetServerVersion>
+        <TargetFolder>Calgary_Report</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

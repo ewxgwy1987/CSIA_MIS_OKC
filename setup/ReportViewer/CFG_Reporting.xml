@@ -1,0 +1,409 @@
+<!--BTS Service Application Configuration-->
+<application name="PALS.ReportViewer">
+  <!--Configuration Parameters that are divided into different configSet-->
+  <configSet name="Application.Initializer">
+    <company>Pteris Global</company>
+    <department>CSI</department>
+    <author>XuJian</author>
+  </configSet>
+	<log4net>
+    <!-- This section contains the log4net configuration settings -->
+		<!-- Define some output appenders -->
+		<appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+			<param name="File" value="${PALS_LOG}\\ReportViewer.log" />
+			<param name="AppendToFile" value="True" />
+			<param name="DatePattern" value=".yyyyMMdd" />
+			<param name="RollingStyle" value="Date" />
+			<layout type="log4net.Layout.PatternLayout">
+				<param name="ConversionPattern" value="%d %-5p - %m%n" />
+			</layout>
+		</appender>
+		<!-- Setup the root category, add the appenders and set the default level -->
+    		<root>
+			<!-- Level value can be ALL, DEBUG, INFO, WARN, ERROR, FATAL, OFF -->
+			<level value="OFF" />
+			<appender-ref ref="RollingLogFileAppender" />
+		</root>
+	</log4net>
+
+  <configSet name="Reporting">
+    <!--
+    Global Report Server URL. Individual report can has own reportServerUrl node, so that your
+    can print the reports that are located in the different report servers. If the individual report 
+    don't have reportServerUrl node, this global report server URL will be used. 
+    -->
+    <!--<reportServerUrl>http://saccom01/ReportServer</reportServerUrl>-->
+	<reportServerUrl>http://localhost/ReportServer</reportServerUrl>
+    <!--
+    User identity of log onto reporting server. If userName is empty, then Windows authentication 
+    of current logged in user on client computer will be used for logging onto reporting server. Otherwise,
+    the given username and password will be passed to reporting server for authentication.
+    If reporting server is domain node, then the value of attribute "domain" should be domain name.
+    If reporting server is workgroup server, then the value of attribute "domain" should be computer 
+    name of reporting server. 
+    Note:
+    1. Empty user name should be assigned for SQL Server 2005 Reporting Service;
+    2. Actual user name, password and domain should be assigned for SQL Server 2008 Reporting Service;
+    3. DO NOT ASSIGN ADMINISTRATOR USER NAME AND PASSWORD IN THIS FILE.
+    -->
+    <reportServerCredential userName="administrator" password="pa1s@adm1n" domain="CDIABHS" />
+	<!--<reportServerCredential userName="ewxgwy1987" password="21ewxgwy" domain="" />-->
+    <!--
+    previewZoom attribute mode: 0 - FullPage, 1 - PageWidth, 2 - Percent;
+    attribute percent: integer value of zoom percentage. Percentage will only be used when mode attribute is Percent 
+    -->
+    <!--<previewZoom mode="2" percent="100" />-->
+	<previewZoom mode="2"  percent="100" />
+    <!-- Set the display mode of ReportViewer object. True: PrintLayout, False: Normal Layout. -->
+    <showPrintLayout>False</showPrintLayout>
+    <!-- autoCloseViewer decide whether the report window to be closed automatically or not when it lose focus. -->
+    <autoCloseViewer>False</autoCloseViewer>
+    <!-- reportListStyle, 1: ListBox, 2: TreeView -->
+    <reportListStyle>2</reportListStyle>
+    <!-- displaySingleGroupName decide whether the group name is shown in the TreeView if there is only one report group -->
+    <showSingleGroupName>False</showSingleGroupName>
+
+    <!-- dateFormat and timeFormat are used to define the Date or Time format string.
+    attribute "valueType" has two valid settings: CultureDefault & CultureCustomized.
+    CultureDefault    - To inform PALS.ReportViewer to pass the defautl
+                        format string of culture used by current thread;
+    CultureCustomized - To inform PALS.ReportViewer to pass user selected (customized)
+                        format string of culture used by current thread;
+    
+    attribute "valuePart" has four valid settings: ShortDatePattern & ShortTimePattern.
+    ShortDatePattern  - (Recommended) Use Short Date format string, e.g. dd/MM/yyyy
+    LongDatePattern   - Use Long Date format string, e.g. dddd, MMMM dd, yyyy
+    ShortTimePattern  - Use Short Time format string, e.g. h:m:s tt
+    LongTimePattern   - (Recommended) Use Long Time format string, e.g. hh:mm:ss tt
+    
+    If dateFormat and timeFormat are missing or assigned with invalid setting, but report template
+    requires the Date & Time format string as the report parameters, then the CultureCustomized 
+    short date and long time format string will be used.
+    -->
+    <dateFormat valueType="CultureCustomized" valuePart="ShortDatePattern"></dateFormat>
+    <timeFormat valueType="CultureCustomized" valuePart="LongTimePattern"></timeFormat>
+
+    <!-- ############################################################################################# 
+    XML Configuration Guide:
+    Report Group Rules:
+    ===================
+    1. Multiple reports node can be defined by multiple "reports" node, but their "group" attribute 
+       must be different. 
+    2. If reports "group" attribute is empty, the default name "Group?" will be displayed on 
+       BHS_ReportViewer GUI. "?" here is the sequence number that reports node in the XML file. 
+    3. The same report name and type can be appeared in the different report groups, but not in 
+       the same group. 
+    4. The reports group name or report name must not contain "\" string.
+    
+    Report Name & Type Rule:
+    ========================
+    1. If the enabled attribute of report node is Fault, this report name will not be displayed
+       in the report list on the BHS_ReportViewer application GUI.
+    2. The same report name can be assigned to the name attribute of report node. But their
+       type attribute must be assigned with different value, and it can not be empty value. The
+       same report name can have up to 6 types.
+    
+    Report Parameter Rule:
+    ======================
+    1. params node defines the default value of report parameters. If they are defined at here, 
+       these default value will be passed to report template. You can also ommit them. If do so, 
+       there is no default values will be passed to report template.
+    2. The valid param node datatype are: 
+        - String 
+        - Integer
+        - Boolean
+        - Double
+        - DateTime 
+    3. If the data type of param node is DateTime, it's value represents a number of whole and 
+       fractional hours offset from the current date and time. It can be negative or positive 
+       value. 
+    4. If the data type of param node is DateTime, and the attribute "dateonly" value is "True", 
+       e.g.:
+            <report enabled="True" type="" name="Automatic RF Reader Or Writer Report">
+          		<authentication>False</authentication>
+              <reportPath>/BHSReports/AutomaticRFReaderOrWriter</reportPath>
+              <needDateTimeFormat>True</needDateTimeFormat>
+              <params>
+                <param name="DTFrom" datatype="DateTime" value="-24" dateonly="True"></param>
+                <param name="DTTo" datatype="DateTime" value="0" dateonly="False"></param>
+              </params>
+            </report>
+       then only date value will be assigned to report parameter. But if it is "False" or not 
+       given, then both date and time values will be assigned to report parameter. 
+    5. needDateTimeFormat setting used to inform PALS.ReportViewer application that the report
+       template has both "DFormat" and "TFormat" parameters. Hence, the date and time format 
+       string defined by above "dateFormat" and "timeFormat" setting will be passed into
+       report template. If needDateTimeFormat is not defined, then no date/time format string
+       will be passed to report template.
+    6. The name of report parameter "DFormat" and "TFormat" must be used by report templates to
+       receive the Date & Time format from PALS.ReportViewer application.
+    7. authentication setting is used to control the another level of user authentication requirement.
+       If its value is "False" or not given, then the user name and password defined in 
+       global setting "reportServerCredential" will be passed to report server. If its value 
+       is "True", then PALS ReportViewer application will pop up a user log on window to ask 
+       for the user name and password and then pass them to report server for authentication.
+    ############################################################################################# -->
+
+    <!-- Report Group and Individual Report Defination: -->
+    <reports group="SAC">
+	  <!--
+      <report enabled="True" type="" name="ATR Statistics Report">
+		<authentication>True</authentication>
+        <reportPath>/BHSReports/ATRStatistics</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+        <params>
+          <param name="DTFrom" datatype="DateTime" value="-24"></param>
+          <param name="DTTo" datatype="DateTime" value="0"></param>
+        </params>
+      </report>
+	  -->
+
+      <report enabled="True" type="" name="Tag Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/01 BagTagReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+        <params>
+          <!--<param name="SDO" datatype="DateTime" value="0"></param>-->
+        </params>
+      </report>
+	  
+	  <report enabled="True" type="" name="EDS ID Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/02 EDSIDReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Standby Baggage Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/03 StandbyBaggageReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Sort Correlation Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/04 SortCorrelationReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="MEC Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/09 MECReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Load Balancing Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/10 LoadBalancingReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Runout Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/11 RunoutReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="ATR Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/12 ATRReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Day End Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/14 DayEndReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Sort Area Assignment Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/15 SortAreaAssignmentReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Flight Summary Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/16 FlightSummaryReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Individual Flight Summary Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/17 IndivFlightSummaryReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Bag Tag NotFound Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/18 BagTagNotFoundReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="BSM Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/19 BSMReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Bag Data Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/20 BagDataReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="EDS Statistics Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/21 EDSStatisticsReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Critical Tracking PEC Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/22 CriticalTrackingPECReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Baggage Dimensioning Statistics Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/24 BaggageDimensioningStatisticsReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="CBRA Statistics Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/25 CBRAStatisticsReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  	  <report enabled="True" type="" name="Time in System Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/26 TimeinSystemReport </reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Bag Trace Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/27 BagTraceReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	</reports>
+	
+    <reports group="MDS">
+      <!--<report enabled="True" type="" name="Equipment Malfunction Detection">
+		<authentication>True</authentication>
+        <reportPath>/BHSReports/05.1 EquipmentMalfunction_Detection</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>-->
+	  
+	  <report enabled="True" type="" name="Equipment Malfunction Correction">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/05 EquipmentMalfunction_Correction</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Equipment Operational Summary">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/06 EquipOperationalSummary</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Computer and PLC Status Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/07.1 ComputerandPLCStatusReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Individual PLC Status Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/07.2 IndivPLCStatusReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Equipment Malfunction Summary Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/08 EquipMalfunctionSummaryReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="EDS Machine Status Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/13.1 EDSMachineStatusReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="Individual EDS Status Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/13.2 IndivEDSStatusReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+	  <report enabled="True" type="" name="PEC Tracking Statistics Report">
+		<!--<authentication>True</authentication>-->
+        <reportPath>/BHSReports/23 PECTrackingStatisticsReport</reportPath>
+        <needDateTimeFormat>True</needDateTimeFormat>
+		<params>
+		</params>
+	  </report>
+	  
+
+
+    </reports>
+  </configSet>
+</application>

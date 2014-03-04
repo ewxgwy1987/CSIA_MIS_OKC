@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{CA69F68C-1271-4512-A048-D76D828146EB}"
+	ProjectSection(SolutionItems) = preProject
+		Configurations\CFG_Reporting.xml = Configurations\CFG_Reporting.xml
+	EndProjectSection
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Report_Template", "Report_Template\Report_Template.rptproj", "{58E59E67-A1D1-44A4-B89F-5104B2FEF568}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58E59E67-A1D1-44A4-B89F-5104B2FEF568}.Debug|Default.ActiveCfg = Debug
+		{58E59E67-A1D1-44A4-B89F-5104B2FEF568}.Debug|Default.Build.0 = DebugLocal
+		{58E59E67-A1D1-44A4-B89F-5104B2FEF568}.Debug|Default.Deploy.0 = DebugLocal
+		{58E59E67-A1D1-44A4-B89F-5104B2FEF568}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{58E59E67-A1D1-44A4-B89F-5104B2FEF568}.DebugLocal|Default.Build.0 = DebugLocal
+		{58E59E67-A1D1-44A4-B89F-5104B2FEF568}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{58E59E67-A1D1-44A4-B89F-5104B2FEF568}.Release|Default.ActiveCfg = Release
+		{58E59E67-A1D1-44A4-B89F-5104B2FEF568}.Release|Default.Build.0 = Release
+		{58E59E67-A1D1-44A4-B89F-5104B2FEF568}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
