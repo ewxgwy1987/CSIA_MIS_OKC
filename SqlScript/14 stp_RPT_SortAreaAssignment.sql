@@ -1,0 +1,16 @@
+GO
+USE [BHSDB];
+GO
+
+
+CREATE PROCEDURE dbo.stp_RPT15_SortAreaAssignment_GWYTEST
+		  @DTFrom datetime , 
+		  @DTTo datetime
+AS
+BEGIN
+	PRINT 'SortAreaAssignment STORED PROCEDURE BEGIN';
+
+	SELECT frc.CURRENT_RESOURCE as Physical_MakeUp, frc.NEW_RESOURCE as AssignedTo
+	FROM FLIGHT_RESOURCE_CHANGE frc
+	WHERE TIME_STAMP BETWEEN @DTFrom AND @DTTo
+END

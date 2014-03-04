@@ -54,6 +54,14 @@
       <FullPath>11 DayEndReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>12 ActiveFlightReport.rdl</Name>
+      <FullPath>12 ActiveFlightReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>13 PermanentFlightReport .rdl</Name>
+      <FullPath>13 PermanentFlightReport .rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>14 SortAreaAssignmentReport.rdl</Name>
       <FullPath>14 SortAreaAssignmentReport.rdl</FullPath>
     </ProjectItem>
@@ -378,12 +386,8 @@
       <FullPath>Z 25 CBRAStatistics.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>13 PermanentFlightReport .rdl</Name>
-      <FullPath>13 PermanentFlightReport .rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>12 ActiveFlightReport.rdl</Name>
-      <FullPath>12 ActiveFlightReport.rdl</FullPath>
+      <Name>Z OLD_01 ThroughputReport.rdl</Name>
+      <FullPath>Z OLD_01 ThroughputReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Z OLD_06 BagTagTableReport.rdl</Name>
@@ -394,8 +398,12 @@
       <FullPath>Z OLD_18 BagDataReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Z OLD_01 ThroughputReport.rdl</Name>
-      <FullPath>Z OLD_01 ThroughputReport.rdl</FullPath>
+      <Name>27 BagTraceReport.rdl</Name>
+      <FullPath>27 BagTraceReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>28 HistoryAlarm.rdl</Name>
+      <FullPath>28 HistoryAlarm.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
