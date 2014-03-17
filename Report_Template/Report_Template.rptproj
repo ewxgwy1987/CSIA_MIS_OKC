@@ -58,8 +58,8 @@
       <FullPath>12 ActiveFlightReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>13 PermanentFlightReport .rdl</Name>
-      <FullPath>13 PermanentFlightReport .rdl</FullPath>
+      <Name>13 PermanentFlightReport.rdl</Name>
+      <FullPath>13 PermanentFlightReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>14 SortAreaAssignmentReport.rdl</Name>
@@ -112,6 +112,14 @@
     <ProjectItem>
       <Name>26 BagTagNotFoundReport.rdl</Name>
       <FullPath>26 BagTagNotFoundReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>27 BagTraceReport.rdl</Name>
+      <FullPath>27 BagTraceReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>28 HistoryAlarm.rdl</Name>
+      <FullPath>28 HistoryAlarm.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>99-2 EquipmentOperationalSummaryReport.rdl</Name>
@@ -397,14 +405,6 @@
       <Name>Z OLD_18 BagDataReport.rdl</Name>
       <FullPath>Z OLD_18 BagDataReport.rdl</FullPath>
     </ProjectItem>
-    <ProjectItem>
-      <Name>27 BagTraceReport.rdl</Name>
-      <FullPath>27 BagTraceReport.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>28 HistoryAlarm.rdl</Name>
-      <FullPath>28 HistoryAlarm.rdl</FullPath>
-    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>
@@ -413,7 +413,7 @@
       <Options>
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
-        <TargetServerURL>http://sacdb/ReportServer</TargetServerURL>
+        <TargetServerURL>http://10.71.200.29/ReportServer</TargetServerURL>
         <TargetFolder>BHSReports</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
         <OverwriteDataSources>true</OverwriteDataSources>

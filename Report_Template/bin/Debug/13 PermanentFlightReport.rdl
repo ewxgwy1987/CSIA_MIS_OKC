@@ -6,13 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.52003in</Width>
+              <Width>1.01965in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16134in</Width>
+              <Width>1.17179in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.85477in</Width>
+              <Width>1.36149in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.4077in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.55916in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -21,14 +27,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox159">
+                    <Textbox Name="Textbox106">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Time</Value>
+                              <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -40,15 +46,11 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox61</rd:DefaultName>
+                      <rd:DefaultName>Textbox106</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
                         </Border>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                          <Width>1.5pt</Width>
-                        </BottomBorder>
                         <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -61,6 +63,155 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox107">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox107</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox108">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox108</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox111">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox111</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.23622in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Textbox1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -68,7 +219,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>GID</Value>
+                              <Value>Airline</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -101,14 +252,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox155">
+                    <Textbox Name="Textbox154">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Action</Value>
+                              <Value>Flight</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -116,7 +267,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -139,21 +290,141 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox160">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Weekdays</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox62</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox155">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>STO</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox57</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox158">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Resources</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox61</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.28863in</Height>
+              <Height>0.23622in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Action_Time2">
+                    <Textbox Name="AIRLINE">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!TIME_STAMP.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Value>=Fields!AIRLINE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -165,7 +436,178 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Action_Time</rd:DefaultName>
+                      <rd:DefaultName>AIRLINE</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>2</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox87">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox86</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox80">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox80</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox85">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox85</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.23622in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox52">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox52</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -182,14 +624,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="BAG_GID">
+                    <Textbox Name="FLIGHT">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!BAG_GID.Value</Value>
+                              <Value>=Fields!FLIGHT.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -197,11 +639,11 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>BAG_GID</rd:DefaultName>
+                      <rd:DefaultName>FLIGHT</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -218,14 +660,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Bag_Action2">
+                    <Textbox Name="WEEKDAYS">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!BAG_EVENT.Value</Value>
+                              <Value>=Fields!WEEKDAYS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -233,11 +675,83 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Bag_Action</rd:DefaultName>
+                      <rd:DefaultName>WEEKDAYS</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Bags_Total">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Format(Fields!STO.Value,Parameters!TFormat.Value)</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Bags_Total</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="RESOURCES">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!RESOURCES.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>RESOURCES</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -257,6 +771,46 @@
             <TablixRow>
               <Height>0.23622in</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </TopBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox273">
@@ -299,7 +853,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="Textbox8">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -314,11 +868,11 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <rd:DefaultName>Textbox8</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -339,7 +893,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox10">
+                    <Textbox Name="Textbox274">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -349,7 +903,47 @@
                               <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox274</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </TopBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox277">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -358,7 +952,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <rd:DefaultName>Textbox277</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -386,6 +980,8 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -396,14 +992,43 @@
               <KeepTogether>true</KeepTogether>
             </TablixMember>
             <TablixMember>
-              <Group Name="Bag_Trace_Detail" />
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="AIRLINE">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!AIRLINE.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!TIME_STAMP.Value</Value>
+                  <Value>=Fields!AIRLINE.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
-                <TablixMember />
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="FLIGHT_NUMBER" />
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!WEEKDAYS.Value</Value>
+                    </SortExpression>
+                    <SortExpression>
+                      <Value>=Fields!STO.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                    <ToggleItem>AIRLINE</ToggleItem>
+                  </Visibility>
+                </TablixMember>
               </TablixMembers>
             </TablixMember>
             <TablixMember>
@@ -411,15 +1036,15 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsBagTrace</DataSetName>
-        <Top>0.31834cm</Top>
-        <Left>1.00017mm</Left>
-        <Height>0.76107in</Height>
-        <Width>6.53614in</Width>
+        <DataSetName>dsTestPermanentFlight</DataSetName>
+        <Top>0.14195cm</Top>
+        <Left>1mm</Left>
+        <Height>1.1811in</Height>
+        <Width>6.51979in</Width>
         <Style />
       </Tablix>
     </ReportItems>
-    <Height>22.51458mm</Height>
+    <Height>32.56874mm</Height>
     <Style>
       <TopBorder>
         <Color>Black</Color>
@@ -429,10 +1054,10 @@
       </BottomBorder>
     </Style>
   </Body>
-  <Width>167.01813mm</Width>
+  <Width>167.79017mm</Width>
   <Page>
     <PageHeader>
-      <Height>50.84792mm</Height>
+      <Height>49.525mm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -454,7 +1079,7 @@
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.945in</Top>
+              <Top>1.195in</Top>
               <Left>0.07875in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
@@ -482,7 +1107,7 @@
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.945in</Top>
+              <Top>1.195in</Top>
               <Left>2.59875in</Left>
               <Height>6mm</Height>
               <Width>12mm</Width>
@@ -513,7 +1138,7 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.945in</Top>
+              <Top>1.195in</Top>
               <Left>0.71097in</Left>
               <Height>6mm</Height>
               <Width>45mm</Width>
@@ -547,7 +1172,7 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.945in</Top>
+              <Top>1.195in</Top>
               <Left>3.11062in</Left>
               <Height>6mm</Height>
               <Width>45mm</Width>
@@ -789,7 +1414,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Bag Trace Report</Value>
+                      <Value>Permanent Flight Report</Value>
                       <Style>
                         <FontSize>11pt</FontSize>
                       </Style>
@@ -800,10 +1425,11 @@
               </Paragraphs>
               <Top>9mm</Top>
               <Left>1.33875in</Left>
-              <Height>6mm</Height>
+              <Height>6.00074mm</Height>
               <Width>88mm</Width>
               <ZIndex>12</ZIndex>
               <Style>
+                <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -811,7 +1437,7 @@
               </Style>
             </Textbox>
             <Line Name="line1">
-              <Top>23mm</Top>
+              <Top>29.35mm</Top>
               <Height>0mm</Height>
               <Width>126mm</Width>
               <ZIndex>13</ZIndex>
@@ -821,14 +1447,14 @@
                 </Border>
               </Style>
             </Line>
-            <Image Name="image1">
+            <Image Name="image2">
               <Source>Database</Source>
               <Value>=First(Fields!PIC_IMAGE.Value, "dsReportLogo")</Value>
               <MIMEType>image/gif</MIMEType>
               <Sizing>Fit</Sizing>
-              <Top>1mm</Top>
-              <Left>1mm</Left>
-              <Height>20mm</Height>
+              <Top>1.11689mm</Top>
+              <Left>2.00025mm</Left>
+              <Height>27.47222mm</Height>
               <Width>30mm</Width>
               <ZIndex>14</ZIndex>
               <Style>
@@ -837,13 +1463,13 @@
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="FromDateTime3">
+            <Textbox Name="FromDateTime2">
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!GID.Value</Value>
+                      <Value>=Join(Parameters!Airline.Value,",")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <Format>G</Format>
@@ -855,10 +1481,10 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.25984in</Top>
+              <Top>1.50066in</Top>
               <Left>0.71097in</Left>
               <Height>6mm</Height>
-              <Width>30.18333mm</Width>
+              <Width>45mm</Width>
               <ZIndex>15</ZIndex>
               <Style>
                 <Border>
@@ -871,13 +1497,13 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="lblFrom3">
+            <Textbox Name="lblFrom2">
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>GID :</Value>
+                      <Value>Airline:</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -887,74 +1513,11 @@
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>1.25984in</Top>
+              <Top>1.50066in</Top>
               <Left>0.07875in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>16</ZIndex>
-              <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="FromDateTime4">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!License_Plate.Value</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <Format>G</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.25984in</Top>
-              <Left>3.59555in</Left>
-              <Height>6mm</Height>
-              <Width>32.68269mm</Width>
-              <ZIndex>17</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="lblFrom4">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>LP# :</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.25984in</Top>
-              <Left>2.89042in</Left>
-              <Height>6mm</Height>
-              <Width>15mm</Width>
-              <ZIndex>18</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -969,7 +1532,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!Logic.Value</Value>
+                      <Value>Flight :</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -979,11 +1542,42 @@
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>1.25984in</Top>
-              <Left>2.06933in</Left>
+              <Top>1.50066in</Top>
+              <Left>2.59875in</Left>
               <Height>6mm</Height>
-              <Width>15.54596mm</Width>
-              <ZIndex>19</ZIndex>
+              <Width>12mm</Width>
+              <ZIndex>17</ZIndex>
+              <Style>
+                <VerticalAlign>Middle</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ToDateTime2">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Join(Parameters!FlightNumber.Value,",")</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <Format>G</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.50066in</Top>
+              <Left>3.11062in</Left>
+              <Height>6mm</Height>
+              <Width>45mm</Width>
+              <ZIndex>18</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1024,7 +1618,7 @@
       <Style />
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>25.4mm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1057,7 +1651,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox313</rd:DefaultName>
-          <Top>0.06944in</Top>
+          <Top>0.04167in</Top>
           <Left>0.03937in</Left>
           <Height>0.90209in</Height>
           <Width>6.51979in</Width>
@@ -1083,12 +1677,12 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>27.94cm</PageHeight>
-    <PageWidth>21.59cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <PageHeight>297mm</PageHeight>
+    <PageWidth>210mm</PageWidth>
+    <LeftMargin>20mm</LeftMargin>
+    <RightMargin>20mm</RightMargin>
+    <TopMargin>20mm</TopMargin>
+    <BottomMargin>20mm</BottomMargin>
     <Style>
       <Border>
         <Style>None</Style>
@@ -1141,6 +1735,94 @@
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="dsAirline">
+      <Query>
+        <DataSourceName>PGLBHSDB</DataSourceName>
+        <CommandText>--SELECT DISTINCT(AIRLINE) FROM FLIGHT_PLAN_SORTING 
+--	WHERE (SDO BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) --AND  CONVERT(VARCHAR(10), @DTTo,111)) AND AIRLINE IN (SELECT * --FROM DBO.RPT_GETAIRLINE(@UserID))
+
+select distinct airline from PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AIRLINE">
+          <DataField>airline</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dsFlightNumber">
+      <Query>
+        <DataSourceName>PGLBHSDB</DataSourceName>
+        <CommandText>--SELECT DISTINCT(FLIGHT_NUMBER) AS 'FLIGHTNUMBER' FROM --FLIGHT_PLAN_SORTING WHERE AIRLINE IN (@Airline) AND (SDO --BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) AND  CONVERT--(VARCHAR(10), @DTTo,111))
+
+select distinct FLIGHT from PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="FLIGHT">
+          <DataField>FLIGHT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dsMain">
+      <Query>
+        <DataSourceName>PGLBHSDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Airline">
+            <Value>=Parameters!Airline.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@FlightNumber">
+            <Value>=Parameters!FlightNumber.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_FLIGHTBAGCOUNT_GWY</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AIRLINE">
+          <DataField>AIRLINE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FLIGHT_NUMBER">
+          <DataField>FLIGHT_NUMBER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DESTINATION">
+          <DataField>DESTINATION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COUNT">
+          <DataField>COUNT</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BAG_COUNT">
+          <DataField>BAG COUNT</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BAG_NOT_SEEN">
+          <DataField>BAG NOT SEEN</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BAG_SEEN">
+          <DataField>BAG SEEN</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EARLY_BAG">
+          <DataField>EARLY BAG</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LATE_BAG">
+          <DataField>LATE BAG</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
     <DataSet Name="dsDateBasic">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
@@ -1181,40 +1863,30 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsBagTrace">
+    <DataSet Name="dsTestPermanentFlight">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFROM">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTO">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@GID">
-            <Value>=Parameters!GID.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@LICENSE_PLATE">
-            <Value>=Parameters!License_Plate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@LOGIC">
-            <Value>=Parameters!Logic.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT_OKC_BAGTRACE</CommandText>
+        <CommandText>SELECT * FROM PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
       </Query>
       <Fields>
-        <Field Name="TIME_STAMP">
-          <DataField>TIME_STAMP</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="BAG_EVENT">
-          <DataField>BAG_EVENT</DataField>
+        <Field Name="AIRLINE">
+          <DataField>AIRLINE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="BAG_GID">
-          <DataField>BAG_GID</DataField>
+        <Field Name="FLIGHT">
+          <DataField>FLIGHT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WEEKDAYS">
+          <DataField>WEEKDAYS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STO">
+          <DataField>STO</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="RESOURCES">
+          <DataField>RESOURCES</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -1294,55 +1966,33 @@
       <Prompt>UserID :</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
-    <ReportParameter Name="GID">
+    <ReportParameter Name="Airline">
       <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>GID:</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="License_Plate">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>License Plate:</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="Logic">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>OR</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Logic:</Prompt>
+      <Prompt>Airline :</Prompt>
       <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>AND</Value>
-            <Label>AND</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>OR</Value>
-            <Label>OR</Label>
-          </ParameterValue>
-        </ParameterValues>
+        <DataSetReference>
+          <DataSetName>dsAirline</DataSetName>
+          <ValueField>AIRLINE</ValueField>
+          <LabelField>AIRLINE</LabelField>
+        </DataSetReference>
       </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="FlightNumber">
+      <DataType>String</DataType>
+      <Prompt>FlightNumber :</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsFlightNumber</DataSetName>
+          <ValueField>FLIGHT</ValueField>
+          <LabelField>FLIGHT</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
     </ReportParameter>
   </ReportParameters>
-  <Code>Public Function MyTimeFormat(ByVal seconds As Integer) As String
-    Dim hour As Integer
-    Dim min As Integer
-    Dim sec As Integer
-    Dim duration As String
-
-    'The \ Operator (Visual Basic) returns the integer quotient of a division. For example, the expression 14 \ 4 evaluates to 3.
-    'The / Operator (Visual Basic) returns the full quotient, including the remainder, as a floating-point number. For example, the expression 14 / 4 evaluates to 3.5.
-    hour = seconds \ 3600
-    min = (seconds Mod 3600) \ 60
-    sec = seconds Mod 60
-
-    duration = Format(hour, "00") &amp; ":" &amp; Format(min, "00") &amp; ":" &amp; Format(sec, "00")
-    Return duration
-End Function</Code>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportUnitType>Mm</rd:ReportUnitType>
   <rd:ReportID>c3fc41bd-6fab-4090-8db5-95be54415bb6</rd:ReportID>
 </Report>

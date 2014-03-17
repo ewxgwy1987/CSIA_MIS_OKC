@@ -1102,7 +1102,7 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="PGLBHSDB">
-      <DataSourceReference>PGLBHSDB_NEW</DataSourceReference>
+      <DataSourceReference>IRELBHSDB</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>9a6c5141-08eb-4401-83b5-7c8aea807afa</rd:DataSourceID>
     </DataSource>
@@ -1111,7 +1111,7 @@
     <DataSet Name="dsReportLogo">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT PIC_TITLE, PIC_IMAGE FROM PICTURES WHERE PIC_NAME = 'Charlotte-ReportLogo'</CommandText>
+        <CommandText>SELECT PIC_TITLE, PIC_IMAGE FROM PICTURES WHERE PIC_NAME = 'ReportLogo'</CommandText>
       </Query>
       <Fields>
         <Field Name="PIC_TITLE">
@@ -1202,7 +1202,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT27_BAGTRACE_GWYTEST</CommandText>
+        <CommandText>stp_RPT_OKC_BAGTRACE</CommandText>
       </Query>
       <Fields>
         <Field Name="TIME_STAMP">
