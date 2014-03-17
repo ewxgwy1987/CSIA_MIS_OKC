@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="IRELBHSDB">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+<<<<<<< HEAD
+    <ConnectString>Data Source=10.71.200.29;Initial Catalog=BHSDB</ConnectString>
+=======
+    <ConnectString>Data Source=SG10031CSD6782;Initial Catalog=BHSDB_OKC</ConnectString>
+>>>>>>> 73b522b242349d3d969012b9b39b209cb38c9f8d
+  </ConnectionProperties>
+  <DataSourceID>f31f79ae-25b9-438e-b87c-6fea3878e3a8</DataSourceID>
+</RptDataSource>

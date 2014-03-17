@@ -219,7 +219,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>TIME SEEN</Value>
+                              <Value>Scan Time</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
