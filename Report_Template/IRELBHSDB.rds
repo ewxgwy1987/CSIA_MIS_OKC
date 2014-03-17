@@ -2,8 +2,7 @@
 <RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="IRELBHSDB">
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=SG10031CSD6782;Initial Catalog=BHSDB2</ConnectString>
-    <IntegratedSecurity>true</IntegratedSecurity>
+    <ConnectString>Data Source=SG10031CSD6782;Initial Catalog=BHSDB_OKC</ConnectString>
   </ConnectionProperties>
   <DataSourceID>f31f79ae-25b9-438e-b87c-6fea3878e3a8</DataSourceID>
 </RptDataSource>
