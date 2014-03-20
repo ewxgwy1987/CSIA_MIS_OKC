@@ -3,7 +3,7 @@ USE [BHSDB];
 GO
 
 
-ALTER PROCEDURE dbo.stp_RPT12_ATR_OVERALL_STATISTIC_GWYTEST
+create PROCEDURE dbo.stp_RPT_OKC_ATR_OVERALL_STATISTIC
 		  @DTFROM datetime , 
 		  @DTTO datetime, 
 		  @ATRUNITS varchar(MAX)
@@ -56,8 +56,8 @@ BEGIN
 			FROM #ATR_ATRDETAIL_TEMP AAT
 			WHERE (AAT.STATUS_TYPE='1'	--Read ok. Single Tag
 				OR AAT.STATUS_TYPE='3'	--Read ok. Multiple tags with different Tag Type
-				OR AAT.STATUS_TYPE='7'
-				OR AAT.STATUS_TYPE='8')	--Read ok. Multiple tags with same Tag Type
+				OR AAT.STATUS_TYPE='7'	--Read ok. Multiple tags with same Tag Type
+				OR AAT.STATUS_TYPE='8')	--Read ok. Multiple tags with more than 3 tag
 			GROUP BY AAT.ATRUNIT
 		 ) AS AAT, #ATR_STATISTIC_TEMP AST
 	WHERE AAT.ATRUNIT=AST.ATRUNIT;
@@ -151,12 +151,7 @@ BEGIN
 							CONVERT(DATETIME,CONVERT(VARCHAR,FPA.SDO,103) + ' ' + DBO.RPT_GETFORMATTEDSTO(dbo.SAC_OFFSETOPERATOR(FPA.STO,FPA.ALLOC_CLOSE_OFFSET)),103)
 					END
 				)--CLOASE TIME
-		AND EXISTS(	
-					SELECT AAT.ATRUNIT FROM MIS_SubsystemCatalog MSC 
-					WHERE AAT.ATRUNIT=MSC.DETECT_LOCATION 
-						AND MSC.SUBSYSTEM_TYPE='ATR' 
-						AND MSC.SUBSYSTEM LIKE 'ML%'
-				  )
+		AND AAT.ATRUNIT='ML1-1'
 
 	--9 Count the number of late bags 
 	UPDATE AST

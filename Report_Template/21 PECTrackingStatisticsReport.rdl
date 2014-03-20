@@ -955,7 +955,7 @@
             <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dtTestPECTracking</DataSetName>
+        <DataSetName>dtPECTracking</DataSetName>
         <Left>1mm</Left>
         <Height>0.95407in</Height>
         <Width>6.53614in</Width>
@@ -1415,7 +1415,12 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Join(Parameters!Subsystem.Value,",")</Value>
+                      <Value>=IIF(	LEN(Join(Parameters!Subsystem.Value,","))&gt;45,
+		Left(	Join(Parameters!Subsystem.Value,","),
+				InStrRev(	LEFT( Join(Parameters!Subsystem.Value,","),45), ","	)
+			) &amp; " ...",
+		Join(Parameters!Subsystem.Value,",")
+	)</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <Format>G</Format>
@@ -1592,63 +1597,11 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsMain">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-            <rd:UserDefined>true</rd:UserDefined>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-            <rd:UserDefined>true</rd:UserDefined>
-          </QueryParameter>
-          <QueryParameter Name="@Subsystem">
-            <Value>=Parameters!Subsystem.Value</Value>
-            <rd:UserDefined>true</rd:UserDefined>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_rpt_trackingphotocell</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="PhotoCellID">
-          <DataField>PhotoCellID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TOTAL">
-          <DataField>TOTAL</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="TYPE">
-          <DataField>TYPE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="BJAM">
-          <Value>=IIF(Fields!TYPE.Value="BJAM",Fields!TOTAL.Value,0)</Value>
-        </Field>
-        <Field Name="MSBJ">
-          <Value>=IIF(Fields!TYPE.Value="MSBJ",Fields!TOTAL.Value,0)</Value>
-        </Field>
-        <Field Name="MISS">
-          <Value>=IIF(Fields!TYPE.Value="MISS",Fields!TOTAL.Value,0)</Value>
-        </Field>
-        <Field Name="UNKNOWN">
-          <Value>=IIF(Fields!TYPE.Value="UNKNOWN",Fields!TOTAL.Value,0)</Value>
-        </Field>
-        <Field Name="TOTAL_BAG">
-          <Value>=IIF(Fields!TYPE.Value="TOTAL_BAG",Fields!TOTAL.Value,0)</Value>
-        </Field>
-      </Fields>
-    </DataSet>
     <DataSet Name="dsSubsystem">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>--SELECT     SUBSYSTEM
---FROM         SUBSYSTEMS
-
-select 'AL01' AS SUBSYSTEM</CommandText>
+        <CommandText>SELECT     SUBSYSTEM
+FROM         SUBSYSTEMS</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">
@@ -1697,7 +1650,7 @@ select 'AL01' AS SUBSYSTEM</CommandText>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsMain2">
+    <DataSet Name="dtPECTracking">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
         <QueryParameters>
@@ -1707,52 +1660,24 @@ select 'AL01' AS SUBSYSTEM</CommandText>
           <QueryParameter Name="@DTTo">
             <Value>=Parameters!DTTo.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@Subsystem">
+          <QueryParameter Name="@SubSystem">
             <Value>=Parameters!Subsystem.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT_TRACKINGPHOTOCELL</CommandText>
+        <CommandText>stp_RPT_OKC_TRACKEDPHOTOCELL</CommandText>
       </Query>
       <Fields>
-        <Field Name="PhotoCellID">
-          <DataField>PhotoCellID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TOTAL_BAG">
-          <DataField>TOTAL_BAG</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="MSBJ">
-          <DataField>MSBJ</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BJAM">
-          <DataField>BJAM</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="MISS">
-          <DataField>MISS</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="UNKNOWN">
-          <DataField>UNKNOWN</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dtTestPECTracking">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT * FROM RPT_TEST_OKC21_PECTracking;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Subsystem">
-          <DataField>Subsystem</DataField>
+        <Field Name="SUBSYSTEM">
+          <DataField>SUBSYSTEM</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="PhotoCellID">
           <DataField>PhotoCellID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="INTERNAL_LOC">
+          <DataField>INTERNAL_LOC</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="TOTAL_BAG">

@@ -1,4 +1,4 @@
-USE [BHSDB_OKC]
+USE [BHSDB]
 GO
 /****** Object:  UserDefinedFunction [dbo].[GET_LATEST_TAGREAD]  */
 SET ANSI_NULLS ON

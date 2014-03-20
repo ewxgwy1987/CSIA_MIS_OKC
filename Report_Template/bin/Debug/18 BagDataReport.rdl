@@ -15,9 +15,6 @@
               <Width>0.8in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.8in</Width>
-            </TablixColumn>
-            <TablixColumn>
               <Width>0.56437in</Width>
             </TablixColumn>
             <TablixColumn>
@@ -25,6 +22,9 @@
             </TablixColumn>
             <TablixColumn>
               <Width>0.54605in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.8in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.8in</Width>
@@ -102,45 +102,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox15</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Bottom</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox3">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -241,6 +202,45 @@
                 <TablixCell />
                 <TablixCell />
                 <TablixCell />
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox10">
@@ -347,58 +347,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox17</rd:DefaultName>
-                      <Style>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1.5pt</Width>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox4">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Time Stamp</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>BMA</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox4</rd:DefaultName>
                       <Style>
                         <BottomBorder>
                           <Color>Black</Color>
@@ -691,6 +639,44 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Clear Time</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <Style>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="tbLevel5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -800,14 +786,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Tracking_ID">
+                    <Textbox Name="GID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Tracking_ID.Value</Value>
+                              <Value>=Fields!GID.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -818,7 +804,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Tracking_ID</rd:DefaultName>
+                      <rd:DefaultName>GID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -838,14 +824,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Bag_Type">
+                    <Textbox Name="BMAM_BAG_TYPE">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bag_Type.Value</Value>
+                              <Value>=Fields!BMAM_BAG_TYPE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -856,45 +842,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Bag_Type</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="BMA_Enter_Time">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Format(Fields!BMA_Enter_Time.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>BMA_Enter_Time</rd:DefaultName>
+                      <rd:DefaultName>BMAM_BAG_TYPE</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -921,7 +869,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!TimeStamp_Entering.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!ENTER_TIMESTAMP.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -958,7 +906,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Level1_Status.Value</Value>
+                              <Value>=Fields!LEVEL1_SCREEN_STATUS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -995,7 +943,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!Level1_Time.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!LEVEL1_SCREENED_TIME.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1025,14 +973,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Level2_Status">
+                    <Textbox Name="LEVEL2_SCREEN_STATUS">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Level2_Status.Value</Value>
+                              <Value>=Fields!LEVEL2_SCREEN_STATUS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1043,7 +991,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Level2_Status</rd:DefaultName>
+                      <rd:DefaultName>LEVEL2_SCREEN_STATUS</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1059,6 +1007,7 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1070,7 +1019,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!Level2_Time.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!LEVEL2_SCREENED_TIME.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1081,6 +1030,44 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Format(Fields!EDS_CLEARTIME.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1107,7 +1094,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!CBRA_Delivered.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!CBRA_DELIVERED_TIME.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1144,7 +1131,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!CBRA_Removed.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!CBRA_REMOVED_TIME.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1241,49 +1228,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox21</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                          <Width>1.5pt</Width>
-                        </Border>
-                        <TopBorder>
-                          <Style>Solid</Style>
-                          <Width>1.5pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox6">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1441,6 +1385,50 @@
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox6">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                          <Width>1.5pt</Width>
+                        </Border>
+                        <TopBorder>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Textbox13">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -1561,7 +1549,7 @@
               <Group Name="tbl_Bag_Routing" />
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!TimeStamp_Entering.Value</Value>
+                  <Value>=Fields!ENTER_TIMESTAMP.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -1590,7 +1578,7 @@
       </BottomBorder>
     </Style>
   </Body>
-  <Width>197.71441mm</Width>
+  <Width>201.06394mm</Width>
   <Page>
     <PageHeader>
       <Height>45.99874mm</Height>
@@ -1983,7 +1971,6 @@
             </Textbox>
             <Line Name="line1">
               <Top>33.2075mm</Top>
-              <Left>0in</Left>
               <Height>0mm</Height>
               <Width>147.43126mm</Width>
               <ZIndex>13</ZIndex>
@@ -2166,108 +2153,63 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsAirline">
-      <Query>
-        <DataSourceName>PGLBHSDB_NEW</DataSourceName>
-        <CommandText>--SELECT DISTINCT(AIRLINE) FROM FLIGHT_PLAN_SORTING 
---	WHERE (SDO BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) --AND  CONVERT(VARCHAR(10), @DTTo,111)) AND AIRLINE IN (SELECT * --FROM DBO.RPT_GETAIRLINE(@UserID))
-
-select distinct airline from RPT_TEST_BagData;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="AIRLINE">
-          <DataField>airline</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsFlightNumber">
-      <Query>
-        <DataSourceName>PGLBHSDB_NEW</DataSourceName>
-        <CommandText>--SELECT DISTINCT(FLIGHT_NUMBER) AS 'FLIGHTNUMBER' FROM --FLIGHT_PLAN_SORTING WHERE AIRLINE IN (@Airline) AND (SDO --BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) AND  CONVERT--(VARCHAR(10), @DTTo,111))
-
-select distinct flight from RPT_TEST_BagData;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="flight">
-          <DataField>flight</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
     <DataSet Name="dsMain">
       <Query>
         <DataSourceName>PGLBHSDB_NEW</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@DTFrom">
+          <QueryParameter Name="@DTFROM">
             <Value>=Parameters!DTFrom.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@DTTo">
+          <QueryParameter Name="@DTTO">
             <Value>=Parameters!DTTo.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>select * from RPT_TEST18_OKC_BagData
-where TimeStamp_Entering between @DTFrom and @DTTo;</CommandText>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_BagData</CommandText>
       </Query>
       <Fields>
-        <Field Name="Airline">
-          <DataField>Airline</DataField>
+        <Field Name="GID">
+          <DataField>GID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="BMAM_BAG_TYPE">
+          <DataField>BMAM_BAG_TYPE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="FLIGHT">
-          <DataField>Flight</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Tracking_ID">
-          <DataField>Tracking_ID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Tag_ID">
-          <DataField>Tag_ID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Bag_Type">
-          <DataField>Bag_Type</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="EDS_SerialNum">
-          <DataField>EDS_SerialNum</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="BMA_Enter_Time">
-          <DataField>BMA_Enter_Time</DataField>
+        <Field Name="ENTER_TIMESTAMP">
+          <DataField>ENTER_TIMESTAMP</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="TimeStamp_Entering">
-          <DataField>TimeStamp_Entering</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="Level1_Status">
-          <DataField>Level1_Status</DataField>
+        <Field Name="LEVEL1_SCREEN_STATUS">
+          <DataField>LEVEL1_SCREEN_STATUS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Level1_Time">
-          <DataField>Level1_Time</DataField>
+        <Field Name="LEVEL1_SCREENED_TIME">
+          <DataField>LEVEL1_SCREENED_TIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="Level2_Status">
-          <DataField>Level2_Status</DataField>
+        <Field Name="LEVEL2_SCREEN_STATUS">
+          <DataField>LEVEL2_SCREEN_STATUS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Level2_Time">
-          <DataField>Level2_Time</DataField>
+        <Field Name="LEVEL2_SCREENED_TIME">
+          <DataField>LEVEL2_SCREENED_TIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="CBRA_Delivered">
-          <DataField>CBRA_Delivered</DataField>
+        <Field Name="CBRA_DELIVERED_TIME">
+          <DataField>CBRA_DELIVERED_TIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="CBRA_Removed">
-          <DataField>CBRA_Removed</DataField>
+        <Field Name="EDS_CLEARTIME">
+          <DataField>EDS_CLEARTIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="CBRA_ETD_Station">
-          <DataField>CBRA_ETD_Station</DataField>
+        <Field Name="CBRA_REMOVED_TIME">
+          <DataField>CBRA_REMOVED_TIME</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="EDS_CLEARLOCATION">
+          <DataField>EDS_CLEARLOCATION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

@@ -240,7 +240,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!ALM_TIMESET.Value, Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!ALM_STARTTIME.Value, Parameters!TFormat.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -258,6 +258,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -269,7 +270,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!ALM_TIMECLEAR.Value, Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!ALM_ENDTIME.Value, Parameters!TFormat.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -291,21 +292,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ALM_SUBSYSTEM">
+                    <Textbox Name="ALM_ALMAREA1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ALM_SUBSYSTEM.Value</Value>
+                              <Value>=Fields!ALM_ALMAREA1.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ALM_SUBSYSTEM</rd:DefaultName>
+                      <rd:DefaultName>ALM_ALMAREA1</rd:DefaultName>
                       <ZIndex>4</ZIndex>
                       <Style>
                         <Border>
@@ -321,21 +322,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ALM_EQUIPID">
+                    <Textbox Name="ALM_ALMEXTFLD2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ALM_EQUIPID.Value</Value>
+                              <Value>=Fields!ALM_ALMEXTFLD2.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ALM_EQUIPID</rd:DefaultName>
+                      <rd:DefaultName>ALM_ALMEXTFLD2</rd:DefaultName>
                       <ZIndex>3</ZIndex>
                       <Style>
                         <Border>
@@ -351,21 +352,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ALM_DESCRIPTION1">
+                    <Textbox Name="ALM_MSGDESC">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ALM_DESCRIPTION.Value</Value>
+                              <Value>=Fields!ALM_MSGDESC.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ALM_DESCRIPTION1</rd:DefaultName>
+                      <rd:DefaultName>ALM_MSGDESC</rd:DefaultName>
                       <ZIndex>2</ZIndex>
                       <Style>
                         <Border>
@@ -433,6 +434,12 @@
               <Group Name="table1_Details_Group2">
                 <DataElementName>Detail</DataElementName>
               </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!ALM_STARTTIME.Value</Value>
+                  <Direction>Descending</Direction>
+                </SortExpression>
+              </SortExpressions>
               <TablixMembers>
                 <TablixMember />
               </TablixMembers>
@@ -484,7 +491,7 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="PGLBHSDB">
-      <DataSourceReference>PGLBHSDB_NEW</DataSourceReference>
+      <DataSourceReference>IRELBHSDB</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>9a6c5141-08eb-4401-83b5-7c8aea807afa</rd:DataSourceID>
     </DataSource>
@@ -544,46 +551,44 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT0502_EquipCorrection</CommandText>
+        <CommandText>stp_RPT_OKC_EquipCorrection</CommandText>
       </Query>
       <Fields>
-        <Field Name="ALM_SUBSYSTEM">
-          <DataField>ALM_SUBSYSTEM</DataField>
+        <Field Name="ALM_ALMAREA1">
+          <DataField>ALM_ALMAREA1</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ALM_EQUIPID">
-          <DataField>ALM_EQUIPID</DataField>
+        <Field Name="ALM_ALMEXTFLD2">
+          <DataField>ALM_ALMEXTFLD2</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ALM_TIMESET">
-          <DataField>ALM_TIMESET</DataField>
+        <Field Name="ALM_STARTTIME">
+          <DataField>ALM_STARTTIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="ALM_TIMECLEAR">
-          <DataField>ALM_TIMECLEAR</DataField>
+        <Field Name="ALM_ENDTIME">
+          <DataField>ALM_ENDTIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="ALM_DESCRIPTION">
-          <DataField>ALM_DESCRIPTION</DataField>
+        <Field Name="ALM_MSGDESC">
+          <DataField>ALM_MSGDESC</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ALM_DURATION">
           <DataField>ALM_DURATION</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="HIDDEN_LOC">
+          <DataField>HIDDEN_LOC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
     </DataSet>
     <DataSet Name="dsSubsystem">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT DISTINCT SUBSYSTEM 
-FROM(
-	SELECT SUBSYSTEM 
-	FROM  SUBSYSTEMS
-	UNION
-	SELECT SUBSYSTEM
-	FROM MDS_LOCATIONS_GWY
-	) AS ALL_SUBSYSTEMS</CommandText>
+        <CommandText>SELECT	DISTINCT SUBSYSTEM
+FROM 	MDS_ALM_LOCATIONS</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">
@@ -600,21 +605,9 @@ FROM(
             <Value>=Parameters!Subsystem.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>--SELECT   DBO.RPT_FORMAT_LOCATION(LOCATION) AS LOCATION
---FROM    LOCATIONS
---WHERE   (SUBSYSTEM IN (@Subsystem))
-
-SELECT DISTINCT LOCATION
-FROM(
-	SELECT   DBO.RPT_FORMAT_LOCATION(LOCATION) AS LOCATION
-	FROM    LOCATIONS
-	WHERE   (SUBSYSTEM IN (@Subsystem))
-	UNION ALL
-	SELECT LOCATION
-	FROM MDS_LOCATIONS_GWY
-	WHERE (SUBSYSTEM IN (@Subsystem))
-	) AS ALL_LOCATIONS
-ORDER BY LOCATION</CommandText>
+        <CommandText>SELECT	DISTINCT LOCATION
+FROM 	MDS_ALM_LOCATIONS
+WHERE     (SUBSYSTEM IN (@Subsystem))</CommandText>
       </Query>
       <Fields>
         <Field Name="LOCATION">

@@ -3,7 +3,7 @@ USE [BHSDB];
 GO
 
 
-CREATE PROCEDURE dbo.stp_RPT15_SortAreaAssignment_GWYTEST
+CREATE PROCEDURE dbo.stp_RPT_OKC_SortAreaAssignment
 		  @DTFrom datetime , 
 		  @DTTo datetime
 AS

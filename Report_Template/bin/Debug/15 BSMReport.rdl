@@ -2,7 +2,7 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="table1">
+      <Tablix Name="tbBSM">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
@@ -39,7 +39,7 @@
                     <Textbox Name="LICENSE_PLATE3">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!License_plate.Value</SortExpression>
+                        <SortExpression>=Fields!LICENSE_PLATE.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -82,7 +82,7 @@
                     <Textbox Name="Textbox2">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!GIVEN_NAME.Value</SortExpression>
+                        <SortExpression>=Fields!PAX_NAME.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -107,7 +107,6 @@
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
-                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1.5pt</Width>
                         </BottomBorder>
@@ -126,7 +125,7 @@
                     <Textbox Name="Textbox44">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!flight_number.Value</SortExpression>
+                        <SortExpression>=Fields!FLIGHT_NUMBER.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -169,7 +168,7 @@
                     <Textbox Name="Textbox39">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!airline.Value</SortExpression>
+                        <SortExpression>=Fields!AIRLINE.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -212,7 +211,7 @@
                     <Textbox Name="Textbox37">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!std_time.Value</SortExpression>
+                        <SortExpression>=Fields!TAG_READ_TIME.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -338,7 +337,7 @@
                     <Textbox Name="Textbox40">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!BSM_RECORD_TIME.Value</SortExpression>
+                        <SortExpression>=Fields!BSM_RECD_TIME.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -363,7 +362,6 @@
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
-                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1.5pt</Width>
                         </BottomBorder>
@@ -375,6 +373,7 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -384,14 +383,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="License_plate">
+                    <Textbox Name="LICENSE_PLATE">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!License_plate.Value</Value>
+                              <Value>=Fields!LICENSE_PLATE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -402,7 +401,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>License_plate</rd:DefaultName>
+                      <rd:DefaultName>LICENSE_PLATE</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -422,14 +421,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="PAX_NAME">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIF(Fields!OTHERS_NAME.Value="",Fields!SURNAME.Value+ " " + Fields!GIVEN_NAME.Value,Fields!SURNAME.Value+ " " + Fields!GIVEN_NAME.Value + " (" + Fields!OTHERS_NAME.Value + ")")</Value>
+                              <Value>=Fields!PAX_NAME.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -440,46 +439,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Width>1.5pt</Width>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="flight_number">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!flight_number.Value</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>flight_number</rd:DefaultName>
+                      <rd:DefaultName>PAX_NAME</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -500,14 +460,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="airline">
+                    <Textbox Name="FLIGHT_NUMBER">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!airline.Value</Value>
+                              <Value>=Fields!FLIGHT_NUMBER.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -518,7 +478,46 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>airline</rd:DefaultName>
+                      <rd:DefaultName>FLIGHT_NUMBER</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Width>1.5pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="AIRLINE">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!AIRLINE.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>AIRLINE</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -546,7 +545,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!std_time.Value,"h:mm tt")</Value>
+                              <Value>=Format(Fields!TAG_READ_TIME.Value, Parameters!DFormat.Value &amp; " " &amp; Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -578,14 +577,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="READ_LOCATION">
+                    <Textbox Name="TAG_READ_LOCATION">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!atr_read.Value</Value>
+                              <Value>=Fields!TAG_READ_LOCATION.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -596,7 +595,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>READ_LOCATION</rd:DefaultName>
+                      <rd:DefaultName>TAG_READ_LOCATION</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -617,15 +616,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox21">
+                    <Textbox Name="BAG_TYPE">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bagtype.Value
-'=IIf(Fields!SOURCE.Value="L","outbound",IIF(Fields!SOURCE.Value="T","transfer","unknown"))</Value>
+                              <Value>=Fields!BAG_TYPE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -636,7 +634,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox21</rd:DefaultName>
+                      <rd:DefaultName>BAG_TYPE</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -664,7 +662,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!BSM_RECORD_TIME.Value,"h:mm tt")</Value>
+                              <Value>=Format(Fields!BSM_RECD_TIME.Value, Parameters!DFormat.Value &amp; " " &amp; Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1034,6 +1032,11 @@
             </TablixMember>
             <TablixMember>
               <Group Name="LICENSE_PLATE" />
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!TAG_READ_TIME.Value</Value>
+                </SortExpression>
+              </SortExpressions>
               <TablixMembers>
                 <TablixMember />
               </TablixMembers>
@@ -1043,7 +1046,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestBSMReport</DataSetName>
+        <DataSetName>dsMain</DataSetName>
         <Top>0.3175cm</Top>
         <Left>1.46155mm</Left>
         <Height>0.70866in</Height>
@@ -1747,14 +1750,23 @@
     <DataSet Name="dsAirline">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>/*SELECT DISTINCT(AIRLINE) FROM FLIGHT_PLAN_SORTING 
-	WHERE (SDO BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) AND  CONVERT(VARCHAR(10), @DTTo,111)) AND AIRLINE IN (SELECT * FROM DBO.RPT_GETAIRLINE(@UserID))*/
-
-select distinct airline from PRT_TEST_OKC15_BSMReport</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT DISTINCT(AIRLINE)
+FROM FLIGHT_PLAN_SORTING 
+WHERE (SDO BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) 
+AND  CONVERT(VARCHAR(10), @DTTo,111)) 
+--AND AIRLINE IN (SELECT * FROM DBO.RPT_GETAIRLINE(@UserID))</CommandText>
       </Query>
       <Fields>
         <Field Name="AIRLINE">
-          <DataField>airline</DataField>
+          <DataField>AIRLINE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -1763,83 +1775,93 @@ select distinct airline from PRT_TEST_OKC15_BSMReport</CommandText>
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@Airline">
+          <QueryParameter Name="@AIRLINE">
             <Value>=Parameters!Airline.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@FlightNumber">
-            <Value>=Parameters!FlightNumber.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTFrom">
+          <QueryParameter Name="@DTFROM">
             <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@FLIGHTNUM">
+            <Value>=Parameters!FLIGHTNUM.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@DTTO">
             <Value>=Parameters!DTTo.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>STP_RPT_BSMREPORT_GWY_TEST</CommandText>
+        <CommandText>stp_RPT_OKC_BSM</CommandText>
       </Query>
       <Fields>
         <Field Name="AIRLINE">
           <DataField>AIRLINE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="GID">
+          <DataField>GID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
         <Field Name="LICENSE_PLATE">
           <DataField>LICENSE_PLATE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PAX_NAME">
+          <DataField>PAX_NAME</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="FLIGHT_NUMBER">
           <DataField>FLIGHT_NUMBER</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SURNAME">
-          <DataField>SURNAME</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="GIVEN_NAME">
-          <DataField>GIVEN_NAME</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OTHERS_NAME">
-          <DataField>OTHERS_NAME</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="READ_TIME">
-          <DataField>READ_TIME</DataField>
+        <Field Name="TAG_READ_TIME">
+          <DataField>TAG_READ_TIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="READ_LOCATION">
-          <DataField>READ_LOCATION</DataField>
+        <Field Name="TAG_READ_LOCATION">
+          <DataField>TAG_READ_LOCATION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="LATE">
-          <DataField>LATE</DataField>
+        <Field Name="BAG_TYPE">
+          <DataField>BAG_TYPE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SOURCE">
-          <DataField>SOURCE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TIME_STAMP">
-          <DataField>TIME_STAMP</DataField>
+        <Field Name="BSM_RECD_TIME">
+          <DataField>BSM_RECD_TIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="STD">
-          <DataField>STD</DataField>
+        <Field Name="TAG_PRINT_TIME">
+          <DataField>TAG_PRINT_TIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BAG_LATE_STATUS">
+          <DataField>BAG_LATE_STATUS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
     <DataSet Name="dsFlightNumber">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>/*SELECT DISTINCT(FLIGHT_NUMBER) AS 'FLIGHTNUMBER' FROM FLIGHT_PLAN_SORTING WHERE AIRLINE IN (@Airline) AND (SDO BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) AND  CONVERT(VARCHAR(10), @DTTo,111))*/
-
-select distinct flight_number from PRT_TEST_OKC15_BSMReport</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@Airline">
+            <Value>=Parameters!Airline.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT DISTINCT(FLIGHT_NUMBER) AS 'FLIGHTNUMBER' 
+FROM FLIGHT_PLAN_SORTING 
+WHERE AIRLINE IN (@Airline) 
+AND (SDO BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) 
+AND  CONVERT(VARCHAR(10), @DTTo,111))
+</CommandText>
       </Query>
       <Fields>
-        <Field Name="flight_number">
-          <DataField>flight_number</DataField>
+        <Field Name="FLIGHTNUMBER">
+          <DataField>FLIGHTNUMBER</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -1881,78 +1903,6 @@ select distinct flight_number from PRT_TEST_OKC15_BSMReport</CommandText>
         <Field Name="IS_DEFAULT">
           <DataField>IS_DEFAULT</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsTestBSMReport">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@Airline">
-            <Value>=Parameters!Airline.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@FlightNumber">
-            <Value>=Parameters!FlightNumber.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>select * from PRT_TEST_OKC15_BSMReport
-where airline in (@Airline) and flight_number in (@FlightNumber)
-and std_time between @DTFrom and @DTTo;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="License_plate">
-          <DataField>License_plate</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="GIVEN_NAME">
-          <DataField>give_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SURNAME">
-          <DataField>surname</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OTHERS_NAME">
-          <DataField>OTHERS_NAME</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="airline">
-          <DataField>airline</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="flight_number">
-          <DataField>flight_number</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="std_time">
-          <DataField>std_time</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="atr_read">
-          <DataField>atr_read</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Bagtype">
-          <DataField>Bagtype</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="BSM_RECORD_TIME">
-          <DataField>BSM_RECORD_TIME</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="Print_time">
-          <DataField>Print_time</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="IsLate">
-          <DataField>IsLate</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -2049,11 +1999,15 @@ and std_time between @DTFrom and @DTTo;</CommandText>
       <ValidValues>
         <DataSetReference>
           <DataSetName>dsFlightNumber</DataSetName>
-          <ValueField>flight_number</ValueField>
-          <LabelField>flight_number</LabelField>
+          <ValueField>FLIGHTNUMBER</ValueField>
+          <LabelField>FLIGHTNUMBER</LabelField>
         </DataSetReference>
       </ValidValues>
       <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="FLIGHTNUM">
+      <DataType>String</DataType>
+      <Prompt>FLIGHTNUM</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>

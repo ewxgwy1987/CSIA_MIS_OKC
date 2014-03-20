@@ -233,14 +233,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="License_Plate">
+                    <Textbox Name="LICENSE_PLATE">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!License_Plate.Value</Value>
+                              <Value>=Fields!LICENSE_PLATE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -252,7 +252,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>License_Plate</rd:DefaultName>
+                      <rd:DefaultName>LICENSE_PLATE</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -270,18 +270,19 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="EDS_ID">
+                    <Textbox Name="XRAY_ID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!EDS_ID.Value</Value>
+                              <Value>=Fields!XRAY_ID.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -293,7 +294,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>EDS_ID</rd:DefaultName>
+                      <rd:DefaultName>XRAY_ID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -475,6 +476,7 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -515,14 +517,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Bag_Action">
+                    <Textbox Name="ACT">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bag_Action.Value</Value>
+                              <Value>=Fields!ACT.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -534,7 +536,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Bag_Action</rd:DefaultName>
+                      <rd:DefaultName>ACT</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -558,7 +560,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!Action_Time.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!TIME_STAMP.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -587,14 +589,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="EDS_Status">
+                    <Textbox Name="XRAY_STAT">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!EDS_Status.Value</Value>
+                              <Value>=Fields!XRAY_STAT.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -606,7 +608,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>EDS_Status</rd:DefaultName>
+                      <rd:DefaultName>XRAY_STAT</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -849,8 +851,8 @@
             <TablixMember>
               <Group Name="BagIDEDS">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!License_Plate.Value</GroupExpression>
-                  <GroupExpression>=Fields!EDS_ID.Value</GroupExpression>
+                  <GroupExpression>=Fields!LICENSE_PLATE.Value</GroupExpression>
+                  <GroupExpression>=Fields!XRAY_ID.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <TablixMembers>
@@ -861,7 +863,7 @@
                   <Group Name="FLIGHT_NUMBER" />
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Action_Time.Value</Value>
+                      <Value>=Fields!TIME_STAMP.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
@@ -869,7 +871,7 @@
                   </TablixMembers>
                   <Visibility>
                     <Hidden>true</Hidden>
-                    <ToggleItem>License_Plate</ToggleItem>
+                    <ToggleItem>LICENSE_PLATE</ToggleItem>
                   </Visibility>
                 </TablixMember>
               </TablixMembers>
@@ -1164,7 +1166,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestScreeningStatus</DataSetName>
+        <DataSetName>dsScreeningStatus</DataSetName>
         <Top>0.16937in</Top>
         <Left>1mm</Left>
         <Height>0.69348in</Height>
@@ -1751,28 +1753,28 @@
             <Value>=Parameters!DTTo.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>select * from PRT_TEST_OKC20_CriticalTrackingPEC_TrackingDetail
-where Action_Time between @DTFrom and @DTTo;</CommandText>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_CRITICALTRACKINGPEC</CommandText>
       </Query>
       <Fields>
-        <Field Name="License_Plate">
-          <DataField>License_Plate</DataField>
+        <Field Name="LICENSE_PLATE">
+          <DataField>LICENSE_PLATE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="EDS_ID">
-          <DataField>EDS_ID</DataField>
+        <Field Name="XRAY_ID">
+          <DataField>XRAY_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Bag_Action">
-          <DataField>Bag_Action</DataField>
+        <Field Name="ACT">
+          <DataField>ACT</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Action_Time">
-          <DataField>Action_Time</DataField>
+        <Field Name="TIME_STAMP">
+          <DataField>TIME_STAMP</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="EDS_Status">
-          <DataField>EDS_Status</DataField>
+        <Field Name="XRAY_STAT">
+          <DataField>XRAY_STAT</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -1817,10 +1819,19 @@ where Action_Time between @DTFrom and @DTTo;</CommandText>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestScreeningStatus">
+    <DataSet Name="dsScreeningStatus">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from PRT_TEST_OKC20_CriticalTrackingPEC_ScreeningStatus;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_ScreeningStatus</CommandText>
       </Query>
       <Fields>
         <Field Name="Screening_Status">

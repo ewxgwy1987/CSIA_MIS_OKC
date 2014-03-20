@@ -83,10 +83,19 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestMESUtilization">
+    <DataSet Name="dsMESUtilization">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT * FROM RPT_TEST_OKC07_MESUtilization_DISPATCH;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFROM">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTO">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_MESUTILIZATION</CommandText>
       </Query>
       <Fields>
         <Field Name="ME_STATION">
@@ -119,10 +128,19 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestMESReason">
+    <DataSet Name="dsMESReason">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT * FROM RPT_TEST_OKC07_MESUtilization_REASON;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFROM">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTO">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_MESUTILIZATION_REASON</CommandText>
       </Query>
       <Fields>
         <Field Name="ME_STATION">
@@ -1337,10 +1355,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>TOTAL BAGS</Value>
+                                  <Value>Total Bags</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Normal</FontWeight>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1502,7 +1520,7 @@
                 <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>dsTestMESReason</DataSetName>
+            <DataSetName>dsMESReason</DataSetName>
             <Top>0.47625cm</Top>
             <Left>28.52456mm</Left>
             <Height>2.69923in</Height>
@@ -2335,10 +2353,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>TOTAL BAGS</Value>
+                                  <Value>Total Bags</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Normal</FontWeight>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2481,7 +2499,7 @@
                 <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>dsTestMESUtilization</DataSetName>
+            <DataSetName>dsMESUtilization</DataSetName>
             <Top>7.50868cm</Top>
             <Left>28.52456mm</Left>
             <Height>1.99057in</Height>

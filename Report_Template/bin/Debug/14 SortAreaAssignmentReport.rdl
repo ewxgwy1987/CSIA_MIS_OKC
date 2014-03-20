@@ -1126,7 +1126,16 @@
     <DataSet Name="dsSortAreaAssginment">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_TEST_SortAreaAssignment;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_SortAreaAssignment</CommandText>
       </Query>
       <Fields>
         <Field Name="Physical_MakeUp">
