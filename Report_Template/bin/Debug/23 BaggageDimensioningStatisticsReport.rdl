@@ -1081,7 +1081,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dtTestBDDMeasure</DataSetName>
+        <DataSetName>dsBDDMeasure</DataSetName>
         <Left>1.46155mm</Left>
         <Height>0.9553in</Height>
         <Width>7.50221in</Width>
@@ -1604,7 +1604,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ALM_ALMAREA1.Value</Value>
+                              <Value>=Fields!BMA_ID.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1719,7 +1719,7 @@
                               </Style>
                             </TextRun>
                             <TextRun>
-                              <Value>=IIF(Fields!CALC_DURATION.Value = 0, "", Format(Sum(Fields!CALC_DURATION.Value) \ 3600, "00") &amp; ":" &amp; Format((Sum(Fields!CALC_DURATION.Value) - (Cint(Format(Sum(Fields!CALC_DURATION.Value) \ 3600, "00")) * 3600)) \ 60, "00") &amp; ":" &amp; Format(Sum(Fields!CALC_DURATION.Value) - Cint(Format(Sum(Fields!CALC_DURATION.Value) \ 3600, "00")) * 3600 - Cint(Format((Sum(Fields!CALC_DURATION.Value) - (Cint(Format(Sum(Fields!CALC_DURATION.Value) \ 3600, "00")) * 3600)) \ 60, "00")) * 60, "00"))</Value>
+                              <Value>=Code.MyTimeFormat(sum(Fields!FAULT_DUARTION.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1823,6 +1823,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1895,7 +1896,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIF(Fields!CALC_DURATION.Value = 0, "00:00:00", Fields!CALC_HOUR.Value &amp; ":" &amp; Fields!CALC_MINUTE.Value &amp; ":" &amp; Fields!CALC_SECOND.Value)</Value>
+                              <Value>=IIF(IsNothing(Fields!FAULT_DUARTION.Value), "---",Code.MyTimeFormat(Fields!FAULT_DUARTION.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -2167,12 +2168,12 @@
             <TablixMember>
               <Group Name="Tbl1_Grp1_Subsystem">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!ALM_ALMAREA1.Value</GroupExpression>
+                  <GroupExpression>=Fields!BMA_ID.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!ALM_ALMAREA1.Value</Value>
+                  <Value>=Fields!BMA_ID.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -2208,11 +2209,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dtTestBDDFault</DataSetName>
+        <DataSetName>dsBDDFault</DataSetName>
         <Top>1.0196in</Top>
         <Left>1.32447mm</Left>
         <Height>1.36876in</Height>
-        <Width>7.50761in</Width>
+        <Width>7.50762in</Width>
         <ZIndex>1</ZIndex>
         <Style />
       </Tablix>
@@ -2600,7 +2601,6 @@
             </Textbox>
             <Line Name="line1">
               <Top>32.525mm</Top>
-              <Left>0in</Left>
               <Height>0mm</Height>
               <Width>148.225mm</Width>
               <ZIndex>13</ZIndex>
@@ -2717,8 +2717,8 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>297mm</PageHeight>
-    <PageWidth>210mm</PageWidth>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
     <LeftMargin>20mm</LeftMargin>
     <RightMargin>20mm</RightMargin>
     <TopMargin>20mm</TopMargin>
@@ -2775,93 +2775,6 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsMain">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT BAMSG.LOCATION, COUNT(BAMSG.LOCATION) AS 'TOTAL',
- (SELECT COUNT(OG.LOCATION) FROM BAGGAGE_MEASURE_ARRAY_MSG OG WHERE TYPE='00' AND BAMSG.LOCATION=OG.LOCATION AND (OG.TIME_STAMP BETWEEN (@DTFrom) AND (@DTTo)) GROUP BY OG.LOCATION) AS 'OUT',
- (SELECT COUNT(NB.LOCATION) FROM BAGGAGE_MEASURE_ARRAY_MSG NB WHERE TYPE='01' AND BAMSG.LOCATION=NB.LOCATION AND (NB.TIME_STAMP BETWEEN (@DTFrom) AND (@DTTo)) GROUP BY NB.LOCATION) AS 'NORMAL',
- (SELECT COUNT(ND.LOCATION) FROM BAGGAGE_MEASURE_ARRAY_MSG ND WHERE TYPE='02' AND BAMSG.LOCATION=ND.LOCATION AND (ND.TIME_STAMP BETWEEN (@DTFrom) AND (@DTTo)) GROUP BY ND.LOCATION) AS 'NOT DIM'
-          FROM BAGGAGE_MEASURE_ARRAY_MSG BAMSG WHERE (BAMSG.TIME_STAMP BETWEEN (@DTFrom) AND (@DTTo)) GROUP BY BAMSG.LOCATION</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="LOCATION">
-          <DataField>LOCATION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TOTAL">
-          <DataField>TOTAL</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="OUT">
-          <DataField>OUT</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="NORMAL">
-          <DataField>NORMAL</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="NOT_DIM">
-          <DataField>NOT DIM</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsBDDFault">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT     ALM_ALMAREA1, ALM_STARTTIME, ALM_ENDTIME, ALM_MSGDESC
-FROM         MDS_ALARMS
-WHERE    (ALM_UNCERTAIN = 0) AND          (ALM_STARTTIME BETWEEN @DTFrom AND @DTTo) AND (ALM_ALMAREA2 = 'AA_BDAL')
-ORDER BY ALM_STARTTIME</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="ALM_ALMAREA1">
-          <DataField>ALM_ALMAREA1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ALM_STARTTIME">
-          <DataField>ALM_STARTTIME</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ALM_ENDTIME">
-          <DataField>ALM_ENDTIME</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ALM_MSGDESC">
-          <DataField>ALM_MSGDESC</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CALC_DURATION">
-          <Value>=IIf(Trim(Fields!ALM_ENDTIME.Value)="", 0, DateDiff("s",Fields!ALM_STARTTIME.Value,Fields!ALM_ENDTIME.Value))</Value>
-        </Field>
-        <Field Name="CALC_HOUR">
-          <Value>=IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format(Fields!CALC_DURATION.Value\3600, "00"))</Value>
-        </Field>
-        <Field Name="CALC_MINUTE">
-          <Value>= IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format((Fields!CALC_DURATION.Value - (Cint(Fields!CALC_HOUR.Value)*3600)) \ 60, "00") )</Value>
-        </Field>
-        <Field Name="CALC_SECOND">
-          <Value>= IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format(Fields!CALC_DURATION.Value - Cint(Fields!CALC_HOUR.Value) * 3600 - Cint(Fields!CALC_MINUTE.Value) * 60,"00"))</Value>
-        </Field>
-      </Fields>
-    </DataSet>
     <DataSet Name="dsDateBasic">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
@@ -2902,10 +2815,19 @@ ORDER BY ALM_STARTTIME</CommandText>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dtTestBDDMeasure">
+    <DataSet Name="dsBDDMeasure">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT * FROM RPT_TEST_OKC23_BDDStatistics_OOG;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFROM">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTO">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_BDDSTATISTICS</CommandText>
       </Query>
       <Fields>
         <Field Name="LOCATION">
@@ -2914,6 +2836,10 @@ ORDER BY ALM_STARTTIME</CommandText>
         </Field>
         <Field Name="TOTAL">
           <DataField>TOTAL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DIM_TOTAL">
+          <DataField>DIM_TOTAL</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="OUT">
@@ -2930,14 +2856,23 @@ ORDER BY ALM_STARTTIME</CommandText>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dtTestBDDFault">
+    <DataSet Name="dsBDDFault">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT * FROM RPT_TEST_OKC23_BDDStatistics_FAULT;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_BDDFault</CommandText>
       </Query>
       <Fields>
-        <Field Name="ALM_ALMAREA1">
-          <DataField>ALM_ALMAREA1</DataField>
+        <Field Name="BMA_ID">
+          <DataField>BMA_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ALM_STARTTIME">
@@ -2948,21 +2883,13 @@ ORDER BY ALM_STARTTIME</CommandText>
           <DataField>ALM_ENDTIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="ALM_MSGDESC">
-          <DataField>ALM_MSGDESC</DataField>
+        <Field Name="FAULT_DUARTION">
+          <DataField>FAULT_DUARTION</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ALM_DESCRIPTION">
+          <DataField>ALM_DESCRIPTION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CALC_DURATION">
-          <Value>=IIf(Trim(Fields!ALM_ENDTIME.Value)="", 0, DateDiff("s",Fields!ALM_STARTTIME.Value,Fields!ALM_ENDTIME.Value))</Value>
-        </Field>
-        <Field Name="CALC_HOUR">
-          <Value>=IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format(Fields!CALC_DURATION.Value\3600, "00"))</Value>
-        </Field>
-        <Field Name="CALC_MINUTE">
-          <Value>= IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format((Fields!CALC_DURATION.Value - (Cint(Fields!CALC_HOUR.Value)*3600)) \ 60, "00") )</Value>
-        </Field>
-        <Field Name="CALC_SECOND">
-          <Value>= IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format(Fields!CALC_DURATION.Value - Cint(Fields!CALC_HOUR.Value) * 3600 - Cint(Fields!CALC_MINUTE.Value) * 60,"00"))</Value>
         </Field>
       </Fields>
     </DataSet>
@@ -3032,8 +2959,26 @@ ORDER BY ALM_STARTTIME</CommandText>
       <Prompt>To :</Prompt>
     </ReportParameter>
   </ReportParameters>
+  <Code>Public Function MyTimeFormat(ByVal seconds As Integer) As String
+    Dim hour As Integer
+    Dim min As Integer
+    Dim sec As Integer
+    Dim duration As String
+
+    'The \ Operator (Visual Basic) returns the integer quotient of a division. For example, the expression 14 \ 4 evaluates to 3.
+    'The / Operator (Visual Basic) returns the full quotient, including the remainder, as a floating-point number. For example, the expression 14 / 4 evaluates to 3.5.
+    hour = seconds \ 3600
+    min = (seconds Mod 3600) \ 60
+    sec = seconds Mod 60
+
+    duration = Format(hour, "00") &amp; ":" &amp; Format(min, "00") &amp; ":" &amp; Format(sec, "00")
+    Return duration
+End Function
+
+
+</Code>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Mm</rd:ReportUnitType>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>c3fc41bd-6fab-4090-8db5-95be54415bb6</rd:ReportID>
 </Report>

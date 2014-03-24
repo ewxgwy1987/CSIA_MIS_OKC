@@ -987,7 +987,6 @@
                       </Style>
                     </Textbox>
                     <ColSpan>3</ColSpan>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell />
@@ -2507,8 +2506,9 @@ WHERE     (SUBSYSTEM IN (@Subsystem))</CommandText>
     <DataSet Name="dsFaultType">
       <Query>
         <DataSourceName>IRELBHSDB</DataSourceName>
-        <CommandText>SELECT     FAULT_NAME, FAULT_DESCRIPTION
-FROM         REPORT_FAULT
+        <CommandText>SELECT	FAULT_NAME, FAULT_DESCRIPTION
+FROM 	REPORT_FAULT
+WHERE 	MDS_USED='1'
 
 	</CommandText>
       </Query>

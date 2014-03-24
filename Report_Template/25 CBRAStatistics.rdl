@@ -625,14 +625,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="CBRA_ETDStation">
+                    <Textbox Name="INSPECTION_TABLE_ID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!CBRA_ETDStation.Value</Value>
+                              <Value>=Fields!INSPECTION_TABLE_ID.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -644,7 +644,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>CBRA_ETDStation</rd:DefaultName>
+                      <rd:DefaultName>INSPECTION_TABLE_ID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1016,7 +1016,7 @@
                   <Group Name="Inspection_Table">
                     <Filters>
                       <Filter>
-                        <FilterExpression>=Fields!CBRA_ETDStation.Value</FilterExpression>
+                        <FilterExpression>=Fields!INSPECTION_TABLE_ID.Value</FilterExpression>
                         <Operator>NotEqual</Operator>
                         <FilterValues>
                           <FilterValue>CBRA</FilterValue>
@@ -1026,7 +1026,7 @@
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!CBRA_ETDStation.Value</Value>
+                      <Value>=Fields!INSPECTION_TABLE_ID.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
@@ -1044,7 +1044,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestCBRATotal</DataSetName>
+        <DataSetName>dsCBRATotal</DataSetName>
         <Top>0.11014in</Top>
         <Left>0.99377mm</Left>
         <Height>1.31652in</Height>
@@ -1614,59 +1614,23 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsMain">
+    <DataSet Name="dsCBRATotal">
       <Query>
         <DataSourceName>IRELBHSDB</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@DTFrom">
+          <QueryParameter Name="@DTFROM">
             <Value>=Parameters!DTFrom.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@DTTo">
+          <QueryParameter Name="@DTTO">
             <Value>=Parameters!DTTo.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>select (select COUNT (*) from ITEM_PROCEEDED where PROCEED_TYPE = '14' and TIME_STAMP between @DTFrom and  @DTTo )AS ALARM,
-(select COUNT (*) from ITEM_PROCEEDED where PROCEED_TYPE = '15' and TIME_STAMP between @DTFrom and  @DTTo )AS TIMEOUT,
-(select COUNT (*) from ITEM_PROCEEDED where PROCEED_TYPE = '16' and TIME_STAMP between @DTFrom and  @DTTo )AS BHS_UNKNOWN,
-(select COUNT (*) from ITEM_PROCEEDED where PROCEED_TYPE = '17' and TIME_STAMP between @DTFrom and  @DTTo )AS EDS_UNKNOWN,
-(select COUNT (*) from ITEM_PROCEEDED where PROCEED_TYPE = '18' and TIME_STAMP between @DTFrom and  @DTTo )AS No_DECISION, 'AL1-10' AS LOCATION</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_CBRASTATISTICS</CommandText>
       </Query>
       <Fields>
-        <Field Name="ALARM">
-          <DataField>ALARM</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="TIMEOUT">
-          <DataField>TIMEOUT</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BHS_UNKNOWN">
-          <DataField>BHS_UNKNOWN</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="EDS_UNKNOWN">
-          <DataField>EDS_UNKNOWN</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="No_DECISION">
-          <DataField>No_DECISION</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="LOCATION">
-          <DataField>LOCATION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsTestCBRATotal">
-      <Query>
-        <DataSourceName>IRELBHSDB</DataSourceName>
-        <CommandText>SELECT * FROM RPT_TEST25_OKC_CBRAStatistic</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="CBRA_ETDStation">
-          <DataField>CBRA_ETDSTATION</DataField>
+        <Field Name="INSPECTION_TABLE_ID">
+          <DataField>INSPECTION_TABLE_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CBRA_ID">
@@ -1680,6 +1644,10 @@
         <Field Name="BAGS_CLEARED">
           <DataField>BAGS_CLEARED</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PERCENTAGE">
+          <DataField>PERCENTAGE</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
