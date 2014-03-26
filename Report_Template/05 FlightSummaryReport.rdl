@@ -485,7 +485,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Flight</Value>
+                              <Value>Flight Number</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -525,7 +525,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Bag Count</Value>
+                              <Value>Number of Bags</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -683,14 +683,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Airline">
+                    <Textbox Name="AIRLINE">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Airline.Value</Value>
+                              <Value>=Fields!AIRLINE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -702,7 +702,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Airline</rd:DefaultName>
+                      <rd:DefaultName>AIRLINE</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -927,18 +927,19 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Flight_NUM">
+                    <Textbox Name="FLIGHT_NUMBER">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Flight_NUM.Value</Value>
+                              <Value>=Fields!FLIGHT_NUMBER.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -950,7 +951,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Flight_NUM</rd:DefaultName>
+                      <rd:DefaultName>FLIGHT_NUMBER</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -967,14 +968,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Bags_Total">
+                    <Textbox Name="NUMBER_ALLBAGS">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bags_Total.Value</Value>
+                              <Value>=Sum(Fields!NUMBER_ALLBAGS.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -986,7 +987,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Bags_Total</rd:DefaultName>
+                      <rd:DefaultName>NUMBER_ALLBAGS</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1003,14 +1004,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="EARLY_BAG">
+                    <Textbox Name="BAG_TYPE">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bags_type.Value</Value>
+                              <Value>=Fields!BAG_TYPE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1022,7 +1023,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>EARLY_BAG</rd:DefaultName>
+                      <rd:DefaultName>BAG_TYPE</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1039,14 +1040,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox67">
+                    <Textbox Name="NUMBER_BAGS_ONTIME">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bags_Ontime_Cnt.Value</Value>
+                              <Value>=Sum(Fields!NUMBER_BAGS_ONTIME.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1058,7 +1059,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox67</rd:DefaultName>
+                      <rd:DefaultName>NUMBER_BAGS_ONTIME</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1075,14 +1076,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Bags_Late_Cnt">
+                    <Textbox Name="NUMBER_BAGS_LATE">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bags_Late_Cnt.Value</Value>
+                              <Value>=Sum(Fields!NUMBER_BAGS_LATE.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1094,7 +1095,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Bags_Late_Cnt</rd:DefaultName>
+                      <rd:DefaultName>NUMBER_BAGS_LATE</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1388,12 +1389,12 @@
             <TablixMember>
               <Group Name="AIRLINE">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!Airline.Value</GroupExpression>
+                  <GroupExpression>=Fields!AIRLINE.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!Airline.Value</Value>
+                  <Value>=Fields!AIRLINE.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -1403,21 +1404,18 @@
                 <TablixMember>
                   <Group Name="FLIGHT_NUMBER">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!Flight_NUM.Value</GroupExpression>
+                      <GroupExpression>=Fields!FLIGHT_NUMBER.Value</GroupExpression>
+                      <GroupExpression>=Fields!BAG_TYPE.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Flight_NUM.Value</Value>
+                      <Value>=Fields!FLIGHT_NUMBER.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
                     <TablixMember />
                   </TablixMembers>
-                  <Visibility>
-                    <Hidden>true</Hidden>
-                    <ToggleItem>Airline</ToggleItem>
-                  </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
@@ -1426,9 +1424,9 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestFlightSummary</DataSetName>
-        <Top>0.14195cm</Top>
-        <Left>1mm</Left>
+        <DataSetName>dsMain</DataSetName>
+        <Top>0.10625cm</Top>
+        <Left>1.34236mm</Left>
         <Height>1.41732in</Height>
         <Width>6.51797in</Width>
         <Style />
@@ -1852,129 +1850,6 @@
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="FromDateTime2">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Join(Parameters!Airline.Value,",")</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <Format>G</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.50066in</Top>
-              <Left>0.71097in</Left>
-              <Height>6mm</Height>
-              <Width>45mm</Width>
-              <ZIndex>15</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="lblFrom2">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Airline:</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.50066in</Top>
-              <Left>0.07875in</Left>
-              <Height>6mm</Height>
-              <Width>15mm</Width>
-              <ZIndex>16</ZIndex>
-              <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="lblTo2">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Flight :</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.50066in</Top>
-              <Left>2.59875in</Left>
-              <Height>6mm</Height>
-              <Width>12mm</Width>
-              <ZIndex>17</ZIndex>
-              <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="ToDateTime2">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Join(Parameters!FlightNumber.Value,",")</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <Format>G</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.50066in</Top>
-              <Left>3.11062in</Left>
-              <Height>6mm</Height>
-              <Width>45mm</Width>
-              <ZIndex>18</ZIndex>
-              <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
           </ReportItems>
           <PageBreak>
             <BreakLocation>End</BreakLocation>
@@ -2124,90 +1999,43 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsAirline">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>--SELECT DISTINCT(AIRLINE) FROM FLIGHT_PLAN_SORTING 
---	WHERE (SDO BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) --AND  CONVERT(VARCHAR(10), @DTTo,111)) AND AIRLINE IN (SELECT * --FROM DBO.RPT_GETAIRLINE(@UserID))
-
-select distinct airline from RPT_TEST_OKC05_FlightSummary;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="AIRLINE">
-          <DataField>airline</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsFlightNumber">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>--SELECT DISTINCT(FLIGHT_NUMBER) AS 'FLIGHTNUMBER' FROM --FLIGHT_PLAN_SORTING WHERE AIRLINE IN (@Airline) AND (SDO --BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) AND  CONVERT--(VARCHAR(10), @DTTo,111))
-
-select distinct flight_num from RPT_TEST_OKC05_FlightSummary;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="flight_num">
-          <DataField>flight_num</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
     <DataSet Name="dsMain">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@DTFrom">
+          <QueryParameter Name="@DTFROM">
             <Value>=Parameters!DTFrom.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@DTTo">
+          <QueryParameter Name="@DTTO">
             <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@Airline">
-            <Value>=Parameters!Airline.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@FlightNumber">
-            <Value>=Parameters!FlightNumber.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT_FLIGHTBAGCOUNT_GWY</CommandText>
+        <CommandText>stp_RPT_OKC_FlightSummary</CommandText>
       </Query>
       <Fields>
-        <Field Name="AIRLINE">
-          <DataField>AIRLINE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="FLIGHT_NUMBER">
           <DataField>FLIGHT_NUMBER</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="DESTINATION">
-          <DataField>DESTINATION</DataField>
+        <Field Name="AIRLINE">
+          <DataField>AIRLINE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="COUNT">
-          <DataField>COUNT</DataField>
+        <Field Name="BAG_TYPE">
+          <DataField>BAG_TYPE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NUMBER_ALLBAGS">
+          <DataField>NUMBER_ALLBAGS</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="BAG_COUNT">
-          <DataField>BAG COUNT</DataField>
+        <Field Name="NUMBER_BAGS_ONTIME">
+          <DataField>NUMBER_BAGS_ONTIME</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="BAG_NOT_SEEN">
-          <DataField>BAG NOT SEEN</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BAG_SEEN">
-          <DataField>BAG SEEN</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="EARLY_BAG">
-          <DataField>EARLY BAG</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="LATE_BAG">
-          <DataField>LATE BAG</DataField>
+        <Field Name="NUMBER_BAGS_LATE">
+          <DataField>NUMBER_BAGS_LATE</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -2249,38 +2077,6 @@ select distinct flight_num from RPT_TEST_OKC05_FlightSummary;</CommandText>
         <Field Name="IS_DEFAULT">
           <DataField>IS_DEFAULT</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsTestFlightSummary">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_TEST_OKC05_FlightSummary;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Flight_NUM">
-          <DataField>Flight_NUM</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Airline">
-          <DataField>Airline</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Bags_Total">
-          <DataField>Bags_Total</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Bags_type">
-          <DataField>Bags_type</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Bags_Ontime_Cnt">
-          <DataField>Bags_Ontime_Cnt</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Bags_Late_Cnt">
-          <DataField>Bags_Late_Cnt</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -2358,30 +2154,6 @@ select distinct flight_num from RPT_TEST_OKC05_FlightSummary;</CommandText>
       </DefaultValue>
       <Prompt>UserID :</Prompt>
       <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="Airline">
-      <DataType>String</DataType>
-      <Prompt>Airline :</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsAirline</DataSetName>
-          <ValueField>AIRLINE</ValueField>
-          <LabelField>AIRLINE</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="FlightNumber">
-      <DataType>String</DataType>
-      <Prompt>FlightNumber :</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>dsFlightNumber</DataSetName>
-          <ValueField>flight_num</ValueField>
-          <LabelField>flight_num</LabelField>
-        </DataSetReference>
-      </ValidValues>
-      <MultiValue>true</MultiValue>
     </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>

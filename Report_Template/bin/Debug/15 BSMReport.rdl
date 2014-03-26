@@ -373,7 +373,6 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1782,7 +1781,7 @@ AND  CONVERT(VARCHAR(10), @DTTo,111))
             <Value>=Parameters!DTFrom.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@FLIGHTNUM">
-            <Value>=Parameters!FLIGHTNUM.Value</Value>
+            <Value>=Parameters!FlightNumber.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@DTTO">
             <Value>=Parameters!DTTo.Value</Value>
@@ -2004,10 +2003,6 @@ AND  CONVERT(VARCHAR(10), @DTTo,111))
         </DataSetReference>
       </ValidValues>
       <MultiValue>true</MultiValue>
-    </ReportParameter>
-    <ReportParameter Name="FLIGHTNUM">
-      <DataType>String</DataType>
-      <Prompt>FLIGHTNUM</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>

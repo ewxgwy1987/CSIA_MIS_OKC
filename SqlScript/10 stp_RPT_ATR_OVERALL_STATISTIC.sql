@@ -3,7 +3,7 @@ USE [BHSDB];
 GO
 
 
-create PROCEDURE dbo.stp_RPT_OKC_ATR_OVERALL_STATISTIC
+ALTER PROCEDURE dbo.stp_RPT_OKC_ATR_OVERALL_STATISTIC
 		  @DTFROM datetime , 
 		  @DTTO datetime, 
 		  @ATRUNITS varchar(MAX)

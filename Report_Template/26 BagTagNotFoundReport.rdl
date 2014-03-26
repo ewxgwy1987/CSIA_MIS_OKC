@@ -529,7 +529,6 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -677,7 +676,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -699,6 +698,7 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1658,7 +1658,16 @@
     <DataSet Name="dsMain">
       <Query>
         <DataSourceName>PGLBHSDB_NEW</DataSourceName>
-        <CommandText>SELECT * FROM PRT_TEST_OKC26_BAGNOTFOUND</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFROM">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTO">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_BAGNOTFOUND</CommandText>
       </Query>
       <Fields>
         <Field Name="CARRIER_ID">

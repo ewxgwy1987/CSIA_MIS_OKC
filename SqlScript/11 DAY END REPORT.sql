@@ -57,17 +57,17 @@ BEGIN
 	DROP TABLE #DAYEND_ATRSTATUS_TEMP;
 END
 
-declare @DTFrom datetime='2014-03-18';
-declare @DTTo datetime='2014-03-22';
-DECLARE @ATRUNITS varchar(MAX)='ML1-1';
-EXEC stp_RPT_OKC_DAYEND_ATRSTATS @DTFrom,@DTTo,@ATRUNITS;
+--declare @DTFrom datetime='2014-03-18';
+--declare @DTTo datetime='2014-03-22';
+--DECLARE @ATRUNITS varchar(MAX)='ML1-1';
+--EXEC stp_RPT_OKC_DAYEND_ATRSTATS @DTFrom,@DTTo,@ATRUNITS;
 
 --3 BDD STATS
 --PROBLEM1: BAGS READ=BAGCNT_NORMAL?
 GO
 USE [BHSDB];
 GO
-create PROCEDURE dbo.stp_RPT_OKC_DAYEND_BDDSTATS
+ALTER PROCEDURE dbo.stp_RPT_OKC_DAYEND_BDDSTATS
 		  @DTFrom DATETIME,
 		  @DTTo DATETIME
 AS
@@ -90,9 +90,9 @@ BEGIN
 	DROP TABLE #DAYEND_BDDSTATUS_TEMP;
 END
 
-declare @DTFrom datetime='2014-03-18';
-declare @DTTo datetime='2014-03-22';
-EXEC stp_RPT_OKC_DAYEND_BDDSTATS @DTFrom,@DTTo
+--declare @DTFrom datetime='2014-03-18';
+--declare @DTTo datetime='2014-03-22';
+--EXEC stp_RPT_OKC_DAYEND_BDDSTATS @DTFrom,@DTTo
 
 --4 MES STATS
 GO
@@ -110,9 +110,9 @@ BEGIN
 	GROUP BY LOC.LOCATION;
 END
 
-declare @DTFrom datetime='2014-03-18';
-declare @DTTo datetime='2014-03-22';
-EXEC stp_RPT_OKC_DAYEND_MESSTATS @DTFrom,@DTTo;
+--declare @DTFrom datetime='2014-03-18';
+--declare @DTTo datetime='2014-03-22';
+--EXEC stp_RPT_OKC_DAYEND_MESSTATS @DTFrom,@DTTo;
 
 --5 EDS STATS
 
@@ -143,9 +143,9 @@ BEGIN
 	DROP TABLE #EDS_STATUS_TEMP;
 END
 
-declare @DTFrom datetime='2014-03-18';
-declare @DTTo datetime='2014-03-22';
-EXEC stp_RPT_OKC_DAYEND_EDSSTATS @DTFrom,@DTTo;
+--declare @DTFrom datetime='2014-03-18';
+--declare @DTTo datetime='2014-03-22';
+--EXEC stp_RPT_OKC_DAYEND_EDSSTATS @DTFrom,@DTTo;
 
 --6 OUTPUTS
 
@@ -165,18 +165,18 @@ BEGIN
 	GROUP BY LOC.LOCATION;
 END
 
-declare @DTFrom datetime='2014-03-18';
-declare @DTTo datetime='2014-03-22';
-EXEC stp_RPT_OKC_DAYEND_OUTPUT @DTFrom,@DTTo;
+--declare @DTFrom datetime='2014-03-18';
+--declare @DTTo datetime='2014-03-22';
+--EXEC stp_RPT_OKC_DAYEND_OUTPUT @DTFrom,@DTTo;
 
 --7 TRACKING
-DECLARE @SUBSYSTEM VARCHAR(MAX);
-SELECT @SUBSYSTEM=COALESCE(@SUBSYSTEM+',' ,'')+SUBSYSTEM FROM SUBSYSTEMS
-SELECT @SUBSYSTEM;
-declare @DTFrom datetime='2014-03-18';
-declare @DTTo datetime='2014-03-22';
+--DECLARE @SUBSYSTEM VARCHAR(MAX);
+--SELECT @SUBSYSTEM=COALESCE(@SUBSYSTEM+',' ,'')+SUBSYSTEM FROM SUBSYSTEMS
+--SELECT @SUBSYSTEM;
+--declare @DTFrom datetime='2014-03-18';
+--declare @DTTo datetime='2014-03-22';
 
-EXEC stp_RPT_OKC_TRACKEDPHOTOCELL @DTFrom,@DTTo,@SUBSYSTEM;
+--EXEC stp_RPT_OKC_TRACKEDPHOTOCELL @DTFrom,@DTTo,@SUBSYSTEM;
 
 --SELECT * FROM MDS_BAG_COUNT MBC 
 --WHERE MBC.TIME_STAMP BETWEEN @DTFrom AND @DTTo
