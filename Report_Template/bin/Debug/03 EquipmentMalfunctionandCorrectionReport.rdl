@@ -2474,8 +2474,8 @@
     <DataSet Name="dsSubsystem">
       <Query>
         <DataSourceName>IRELBHSDB</DataSourceName>
-        <CommandText>SELECT	DISTINCT SUBSYSTEM
-FROM 	MDS_ALM_LOCATIONS</CommandText>
+        <CommandText>SELECT SUBSYSTEM 
+FROM SUBSYSTEMS</CommandText>
       </Query>
       <Fields>
         <Field Name="SUBSYSTEM">
@@ -2492,9 +2492,10 @@ FROM 	MDS_ALM_LOCATIONS</CommandText>
             <Value>=Parameters!Subsystem.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>SELECT	DISTINCT LOCATION
-FROM 	MDS_ALM_LOCATIONS
-WHERE     (SUBSYSTEM IN (@Subsystem))</CommandText>
+        <CommandText>SELECT 	LOCATION
+FROM	LOCATIONS
+WHERE	SUBSYSTEM IN (@Subsystem)
+ORDER BY INTERNAL_LOC</CommandText>
       </Query>
       <Fields>
         <Field Name="LOCATION">

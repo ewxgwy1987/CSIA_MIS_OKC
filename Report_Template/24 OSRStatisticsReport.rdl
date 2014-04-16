@@ -429,7 +429,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Total_Bags.Value)</Value>
+                              <Value>=Sum(Fields!TOTAL_BAGS.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -463,7 +463,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Bags_Cleared.Value)</Value>
+                              <Value>=Sum(Fields!CLEARED_BAGS.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -497,7 +497,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.MyTimeFormat(sum(Fields!avg_second.Value * Fields!Total_Bags.Value)/sum(Fields!Total_Bags.Value))</Value>
+                              <Value>=Code.MyTimeFormat(sum(Fields!AVG_TIME.Value * Fields!TOTAL_BAGS.Value)/sum(Fields!TOTAL_BAGS.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -605,7 +605,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Total_Bags.Value</Value>
+                              <Value>=Fields!TOTAL_BAGS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -639,7 +639,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bags_Cleared.Value</Value>
+                              <Value>=Fields!CLEARED_BAGS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -673,7 +673,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIF(isnothing(Fields!avg_second.Value),"",Code.MyTimeFormat(Fields!avg_second.Value))</Value>
+                              <Value>=IIF(isnothing(Fields!AVG_TIME.Value),"",Code.MyTimeFormat(Fields!AVG_TIME.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -930,7 +930,7 @@
             <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestOSR</DataSetName>
+        <DataSetName>dsOSRStat</DataSetName>
         <Left>1mm</Left>
         <Height>1.19029in</Height>
         <Width>7.02633in</Width>
@@ -1545,30 +1545,39 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestOSR">
+    <DataSet Name="dsOSRStat">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_TEST24_OKC_OSRStatistic</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFROM">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTO">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_OSRSTATISTICS</CommandText>
       </Query>
       <Fields>
         <Field Name="OSR_ID">
           <DataField>OSR_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Total_Bags">
-          <DataField>Total_Bags</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="EDS_ID">
           <DataField>EDS_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Bags_Cleared">
-          <DataField>Bags_Cleared</DataField>
+        <Field Name="TOTAL_BAGS">
+          <DataField>TOTAL_BAGS</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="avg_second">
-          <DataField>avg_second</DataField>
+        <Field Name="CLEARED_BAGS">
+          <DataField>CLEARED_BAGS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AVG_TIME">
+          <DataField>AVG_TIME</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>

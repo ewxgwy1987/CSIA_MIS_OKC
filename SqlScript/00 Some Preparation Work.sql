@@ -205,8 +205,8 @@ CREATE TABLE MIS_TC_LINE_DEVICE --GID_BMA_MAP
 	BMA_LOCATION VARCHAR(20)	--BMA LOCATION
 );
 
-insert into MIS_TC_LINE_DEVICE values('TC1','TC1-27','TC1-28-M1');
-insert into MIS_TC_LINE_DEVICE values('TC7','TC7-21','TC7-21');
+insert into MIS_TC_LINE_DEVICE values('TC1','TC1-27','TC1-28-M1');--?
+insert into MIS_TC_LINE_DEVICE values('TC7','TC7-21','TC7-21');--?
 
 
 GO
@@ -222,10 +222,8 @@ CREATE TABLE MIS_MAINLINE_DEVICE --GID_BMA_MAP
 	IPR_TOMES_SUBSYSTEM VARCHAR(20)
 );
 
-insert into MIS_MAINLINE_DEVICE values('ML01','ML1-1','ML1-2','ME1');
-insert into MIS_MAINLINE_DEVICE values('ML02','ML2-1','ML2-2','ME2');
-insert into MIS_MAINLINE_DEVICE values('ML03','ML3-1','ML3-2','ME3');
-insert into MIS_MAINLINE_DEVICE values('ML04','ML4-1','ML4-2','ME3');
+insert into MIS_MAINLINE_DEVICE values('ML1','ML1-1','ML1-2','ME1');
+
 
 GO
 USE [BHSDB];

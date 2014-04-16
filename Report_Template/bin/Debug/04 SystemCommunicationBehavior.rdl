@@ -818,12 +818,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIF(SUM(Fields!DURATION.Value)=0,"",Code.MyTimeFormat(SUM(Fields!DURATION.Value)))
-'=IIF(Fields!CALC_DURATION.Value=0,"",
-'Format(Sum(Fields!CALC_DURATION.Value)\3600, "00") &amp; ":" &amp; 
-'Format((Sum(Fields!CALC_DURATION.Value) - (Cint(Format(Sum(Fields!CALC_DURATION.Value)\3600, "00"))*3600)) \ 60, "00") &amp; ":" &amp; 
-'Format(Sum(Fields!CALC_DURATION.Value) - Cint(Format(Sum(Fields!CALC_DURATION.Value)\3600, "00")) * 3600 - Cint(Format((Sum(Fields!CALC_DURATION.Value) - (Cint(Format(Sum(Fields!CALC_DURATION.Value)\3600, "00"))*3600)) \ 60, "00")) * 60,"00")
-')</Value>
+                              <Value>=IIF(SUM(Fields!ALM_DURATION.Value)=0,"",Code.MyTimeFormat(SUM(Fields!ALM_DURATION.Value)))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -896,7 +891,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=count(Fields!STARTTIME.Value)</Value>
+                              <Value>=count(Fields!ALM_STARTTIME.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1002,7 +997,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!STARTTIME.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!ALM_STARTTIME.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1032,7 +1027,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!ENDTIME.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!ALM_ENDTIME.Value, Parameters!DFormat.Value + " " +Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1065,9 +1060,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIF(Fields!DURATION.Value=0,"",Code.MyTimeFormat(Fields!DURATION.Value))
-'=Code.MyTimeFormat(Fields!DURATION.Value)
-'=IIF(Fields!CALC_DURATION.Value=0,"00:00:00",Fields!CALC_HOUR.Value &amp; ":" &amp; Fields!CALC_MINUTE.Value &amp; ":" &amp; Fields!CALC_SECOND.Value)</Value>
+                              <Value>=IIF(Fields!ALM_DURATION.Value=0,"",Code.MyTimeFormat(Fields!ALM_DURATION.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1093,14 +1086,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="CORRECTION_DESCRIPTION">
+                    <Textbox Name="ALM_MSGDESC">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!CORRECTION_DESCRIPTION.Value</Value>
+                              <Value>=Fields!ALM_MSGDESC.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1111,7 +1104,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>CORRECTION_DESCRIPTION</rd:DefaultName>
+                      <rd:DefaultName>ALM_MSGDESC</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1320,7 +1313,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.MyTimeFormat(SUM(Fields!DURATION.Value,"dsTestSysCommBehavior"))</Value>
+                              <Value>=Code.MyTimeFormat(SUM(Fields!ALM_DURATION.Value,"dsSysCommBehavior"))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1394,7 +1387,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=count(Fields!STARTTIME.Value, "dsTestSysCommBehavior")</Value>
+                              <Value>=count(Fields!ALM_STARTTIME.Value, "dsSysCommBehavior")</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1462,7 +1455,8 @@
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!STARTTIME.Value</Value>
+                  <Value>=Fields!ALM_STARTTIME.Value</Value>
+                  <Direction>Descending</Direction>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -1476,7 +1470,8 @@
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!STARTTIME.Value</Value>
+                      <Value>=Fields!ALM_STARTTIME.Value</Value>
+                      <Direction>Descending</Direction>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
@@ -1494,7 +1489,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestSysCommBehavior</DataSetName>
+        <DataSetName>dsSysCommBehavior</DataSetName>
         <Left>1.46155mm</Left>
         <Height>1.43313in</Height>
         <Width>6.51796in</Width>
@@ -2069,64 +2064,6 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsMain">
-      <Query>
-        <DataSourceName>IRELBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@Subsystem">
-            <Value>=Parameters!Subsystem.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@FaultType">
-            <Value>=Parameters!FaultType.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT	ALM_ALMAREA1, ALM_ALMEXTFLD2, ALM_STARTTIME, ALM_ENDTIME, ALM_MSGDESC
-FROM	MDS_ALARMS
-WHERE	(ALM_UNCERTAIN = 0) AND (ALM_STARTTIME BETWEEN @DTFrom AND @DTTo) AND 
-		(ALM_ALMAREA1 in (@Subsystem)) AND (ALM_ALMAREA2 IN (@FaultType))
-ORDER BY ALM_STARTTIME</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="ALM_ALMAREA1">
-          <DataField>ALM_ALMAREA1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ALM_ALMEXTFLD2">
-          <DataField>ALM_ALMEXTFLD2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ALM_STARTTIME">
-          <DataField>ALM_STARTTIME</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ALM_ENDTIME">
-          <DataField>ALM_ENDTIME</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ALM_MSGDESC">
-          <DataField>ALM_MSGDESC</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CALC_DURATION">
-          <Value>=IIf(Trim(Fields!ALM_ENDTIME.Value)="", 0, DateDiff("s",Fields!ALM_STARTTIME.Value,Fields!ALM_ENDTIME.Value))</Value>
-        </Field>
-        <Field Name="CALC_HOUR">
-          <Value>=IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format(Fields!CALC_DURATION.Value\3600, "00"))</Value>
-        </Field>
-        <Field Name="CALC_MINUTE">
-          <Value>= IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format((Fields!CALC_DURATION.Value - (Cint(Fields!CALC_HOUR.Value)*3600)) \ 60, "00") )</Value>
-        </Field>
-        <Field Name="CALC_SECOND">
-          <Value>= IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format(Fields!CALC_DURATION.Value - Cint(Fields!CALC_HOUR.Value) * 3600 - Cint(Fields!CALC_MINUTE.Value) * 60,"00"))</Value>
-        </Field>
-      </Fields>
-    </DataSet>
     <DataSet Name="dsSubsystem">
       <Query>
         <DataSourceName>IRELBHSDB</DataSourceName>
@@ -2242,7 +2179,7 @@ FROM         REPORT_FAULT</CommandText>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestSysCommBehavior">
+    <DataSet Name="dsSysCommBehavior">
       <Query>
         <DataSourceName>IRELBHSDB</DataSourceName>
         <QueryParameters>
@@ -2253,29 +2190,33 @@ FROM         REPORT_FAULT</CommandText>
             <Value>=Parameters!DTTo.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>select * from RPT_TEST_OKC_SystemCommunicationBehavior
-where STARTTIME between @DTFrom and @DTTo
-ORDER BY STARTTIME asc;</CommandText>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_SysCommBehavior</CommandText>
       </Query>
       <Fields>
         <Field Name="ALARM_EQUIPMENTID">
           <DataField>ALARM_EQUIPMENTID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CORRECTION_DESCRIPTION">
-          <DataField>CORRECTION_DESCRIPTION</DataField>
+        <Field Name="ALM_STARTTIME">
+          <DataField>ALM_STARTTIME</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ALM_ENDTIME">
+          <DataField>ALM_ENDTIME</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ALM_MSGDESC">
+          <DataField>ALM_MSGDESC</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="STARTTIME">
-          <DataField>STARTTIME</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="ALM_DURATION">
+          <DataField>ALM_DURATION</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="ENDTIME">
-          <DataField>ENDTIME</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="DURATION">
-          <Value>=IIf(Trim(Fields!ENDTIME.Value)="", 0, DateDiff("s",Fields!STARTTIME.Value,Fields!ENDTIME.Value))</Value>
+        <Field Name="HIDDEN_LOC">
+          <DataField>HIDDEN_LOC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
