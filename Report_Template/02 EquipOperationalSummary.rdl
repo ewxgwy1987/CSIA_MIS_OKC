@@ -194,7 +194,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>TRACKING</Value>
+                              <Value>Tracking</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -357,7 +357,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>PHOTOCELL</Value>
+                              <Value>Photocell</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -395,7 +395,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>MISSING BAGS</Value>
+                              <Value>Missing Bags</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -435,7 +435,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>UNKNOWN BAGS</Value>
+                              <Value>Unknown Bags</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -475,7 +475,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>JAMS</Value>
+                              <Value>Jams</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -513,14 +513,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Photocell_id">
+                    <Textbox Name="PhotoCellID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Photocell_id.Value</Value>
+                              <Value>=Fields!PhotoCellID.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -529,7 +529,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Photocell_id</rd:DefaultName>
+                      <rd:DefaultName>PhotoCellID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -549,14 +549,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Missing_Bags_Cnt">
+                    <Textbox Name="MISS">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Missing_Bags_Cnt.Value</Value>
+                              <Value>=Fields!MISS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -567,7 +567,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Missing_Bags_Cnt</rd:DefaultName>
+                      <rd:DefaultName>MISS</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -587,14 +587,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Unkown_Bags_Cnt">
+                    <Textbox Name="UNKNOWN">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Unkown_Bags_Cnt.Value</Value>
+                              <Value>=Fields!UNKNOWN.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -605,7 +605,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Unkown_Bags_Cnt</rd:DefaultName>
+                      <rd:DefaultName>UNKNOWN</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -632,7 +632,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Jam_cnt.Value</Value>
+                              <Value>=Fields!BJAM.Value+Fields!MSBJ.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -712,7 +712,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Missing_Bags_Cnt.Value)</Value>
+                              <Value>=Sum(Fields!MISS.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -754,7 +754,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Unkown_Bags_Cnt.Value)</Value>
+                              <Value>=Sum(Fields!UNKNOWN.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -796,7 +796,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Jam_cnt.Value)</Value>
+                              <Value>=Sum(Fields!BJAM.Value+Fields!MSBJ.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -860,11 +860,6 @@
             </TablixMember>
             <TablixMember>
               <Group Name="Input_Location" />
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!Photocell_id.Value</Value>
-                </SortExpression>
-              </SortExpressions>
               <TablixMembers>
                 <TablixMember />
               </TablixMembers>
@@ -874,7 +869,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestTrackingPhotocell</DataSetName>
+        <DataSetName>dsTrackingPhotocell</DataSetName>
         <Top>0.04167in</Top>
         <Left>1mm</Left>
         <Height>1.1811in</Height>
@@ -987,7 +982,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>JAM PHOTOCELL</Value>
+                              <Value>Jam Photocell</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1025,7 +1020,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>JAMS</Value>
+                              <Value>Jams</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1070,7 +1065,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Photocell_id.Value</Value>
+                              <Value>=Fields!PhotoCellID.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1102,7 +1097,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Jam_cnt.Value</Value>
+                              <Value>=Fields!JAM_BAGS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1178,7 +1173,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Jam_cnt.Value)</Value>
+                              <Value>=Sum(Fields!JAM_BAGS.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1234,7 +1229,7 @@
               <Group Name="Input_Location2" />
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!Photocell_id.Value</Value>
+                  <Value>=Fields!PhotoCellID.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -1246,7 +1241,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestJamPhotocell</DataSetName>
+        <DataSetName>dsJamPhotocell</DataSetName>
         <Top>1.37554in</Top>
         <Left>1mm</Left>
         <Height>0.94488in</Height>
@@ -2123,7 +2118,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dsTestHSPD</DataSetName>
-        <Top>2.45942in</Top>
+        <Top>2.4323in</Top>
         <Left>1mm</Left>
         <Height>0.94488in</Height>
         <Width>6.51797in</Width>
@@ -2144,7 +2139,7 @@
   <Width>167.60853mm</Width>
   <Page>
     <PageHeader>
-      <Height>54.875mm</Height>
+      <Height>56.05147mm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2239,8 +2234,9 @@
               </Style>
             </Textbox>
             <Line Name="lnPHeaderVSeparator">
+              <Top>0.1cm</Top>
               <Left>126mm</Left>
-              <Height>49.64167mm</Height>
+              <Height>50.61189mm</Height>
               <Width>0mm</Width>
               <ZIndex>3</ZIndex>
               <Style>
@@ -2489,7 +2485,7 @@
               </Style>
             </Textbox>
             <Line Name="line1">
-              <Top>32.525mm</Top>
+              <Top>32.11689mm</Top>
               <Height>0mm</Height>
               <Width>126mm</Width>
               <ZIndex>12</ZIndex>
@@ -2539,7 +2535,12 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>ML01</Value>
+                      <Value>=IIF(	LEN(Join(Parameters!Subsystem.Value,","))&gt;45,
+		Left(	Join(Parameters!Subsystem.Value,","),
+				InStrRev(	LEFT( Join(Parameters!Subsystem.Value,","),45), ","	)
+			) &amp; " ...",
+		Join(Parameters!Subsystem.Value,",")
+	)</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <Format>G</Format>
@@ -2554,7 +2555,7 @@
               <Top>1.63484in</Top>
               <Left>0.92625in</Left>
               <Height>6mm</Height>
-              <Width>39.53189mm</Width>
+              <Width>100.48291mm</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border>
@@ -2601,7 +2602,7 @@
               <Value>=First(Fields!PIC_IMAGE.Value, "dsReportLogo")</Value>
               <MIMEType>image/gif</MIMEType>
               <Sizing>Fit</Sizing>
-              <Top>2.00025mm</Top>
+              <Top>0.50811mm</Top>
               <Left>2.00025mm</Left>
               <Height>29.49211mm</Height>
               <Width>30mm</Width>
@@ -2619,7 +2620,7 @@
           <DataElementOutput>ContentsOnly</DataElementOutput>
           <Top>1mm</Top>
           <Left>1mm</Left>
-          <Height>49.64167mm</Height>
+          <Height>51.61189mm</Height>
           <Width>166.01787mm</Width>
           <Style>
             <Border>
@@ -2703,12 +2704,12 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>297mm</PageHeight>
-    <PageWidth>210mm</PageWidth>
-    <LeftMargin>20mm</LeftMargin>
-    <RightMargin>20mm</RightMargin>
-    <TopMargin>20mm</TopMargin>
-    <BottomMargin>20mm</BottomMargin>
+    <PageHeight>27.94cm</PageHeight>
+    <PageWidth>21.59cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
     <Style>
       <Border>
         <Style>None</Style>
@@ -2722,7 +2723,7 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="PGLBHSDB">
-      <DataSourceReference>IRELBHSDB</DataSourceReference>
+      <DataSourceReference>PGLBHSDB_NEW</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>9a6c5141-08eb-4401-83b5-7c8aea807afa</rd:DataSourceID>
     </DataSource>
@@ -2758,171 +2759,6 @@
         <Field Name="TIMEFORMAT">
           <DataField>TIMEFORMAT</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsMainlineStarted">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT DISTINCT MBCTR.SUBSYSTEM AS 'Input Location', SUM(MBCT.DIFFERENT) AS Count
-FROM         MDS_BAG_COUNT AS MBCT INNER JOIN
-                      MDS_BAG_COUNTERS AS MBCTR ON MBCTR.COUNTER_ID = MBCT.COUNTER_ID
-WHERE     (MBCT.TIME_STAMP BETWEEN @DTFrom AND @DTTo)
-GROUP BY MBCTR.SUBSYSTEM</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Input_Location">
-          <DataField>Input Location</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Count">
-          <DataField>Count</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsMainlineCascaded">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT DISTINCT MBCTR.SUBSYSTEM AS 'Input Location', SUM(MBCT.DIFFERENT) AS Count
-FROM         MDS_BAG_COUNT AS MBCT INNER JOIN
-                      MDS_BAG_COUNTERS AS MBCTR ON MBCTR.COUNTER_ID = MBCT.COUNTER_ID
-WHERE     (MBCT.TIME_STAMP BETWEEN @DTFrom AND @DTTo)
-GROUP BY MBCTR.SUBSYSTEM</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Input_Location">
-          <DataField>Input Location</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Count">
-          <DataField>Count</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsMainlineEStop">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT   ALM_ALMEXTFLD2, COUNT(ALM_ALMEXTFLD2) AS 'Count'
-FROM         MDS_ALARMS
-WHERE    (ALM_UNCERTAIN = 0) AND          (ALM_STARTTIME BETWEEN @DTFrom AND @DTTo) AND (ALM_ALMAREA2 = 'AA_ESTP')
-GROUP BY ALM_ALMEXTFLD2</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Count">
-          <DataField>Count</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ALM_ALMEXTFLD2">
-          <DataField>ALM_ALMEXTFLD2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsMotorOverload">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT   ALM_ALMEXTFLD2, COUNT(ALM_ALMEXTFLD2) AS 'Count'
-FROM         MDS_ALARMS
-WHERE    (ALM_UNCERTAIN = 0) AND          (ALM_STARTTIME BETWEEN @DTFrom AND @DTTo) AND (ALM_ALMAREA2 = 'AA_MTTR')
-GROUP BY ALM_ALMEXTFLD2</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="ALM_ALMEXTFLD2">
-          <DataField>ALM_ALMEXTFLD2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Count">
-          <DataField>Count</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsOperationalFaults">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT   ALM_ALMEXTFLD2, COUNT(ALM_ALMEXTFLD2) AS 'Count'
-FROM         MDS_ALARMS
-WHERE    (ALM_UNCERTAIN = 0) AND (ALM_STARTTIME BETWEEN @DTFrom AND @DTTo) AND (ALM_ALMAREA2 IN (SELECT * FROM RPT_GETALARM('OPERATIONAL')))
-GROUP BY ALM_ALMEXTFLD2</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="ALM_ALMEXTFLD2">
-          <DataField>ALM_ALMEXTFLD2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Count">
-          <DataField>Count</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsTechnicalFaults">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT   ALM_ALMEXTFLD2, COUNT(ALM_ALMEXTFLD2) AS 'Count'
-FROM         MDS_ALARMS
-WHERE    (ALM_UNCERTAIN = 0) AND 
-(ALM_STARTTIME BETWEEN @DTFrom AND @DTTo) AND (ALM_ALMAREA2 IN (SELECT * FROM RPT_GETALARM('TECHNICAL')))
-GROUP BY ALM_ALMEXTFLD2</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="ALM_ALMEXTFLD2">
-          <DataField>ALM_ALMEXTFLD2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Count">
-          <DataField>Count</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -2966,71 +2802,132 @@ GROUP BY ALM_ALMEXTFLD2</CommandText>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestTrackingPhotocell">
+    <DataSet Name="dsTrackingPhotocell">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_7_TrackingPhotocell;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SubSystem">
+            <Value>=Parameters!Subsystem.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_TRACKEDPHOTOCELL</CommandText>
       </Query>
       <Fields>
-        <Field Name="Photocell_id">
-          <DataField>Photocell_id</DataField>
+        <Field Name="SUBSYSTEM">
+          <DataField>SUBSYSTEM</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Missing_Bags_Cnt">
-          <DataField>Missing_Bags_Cnt</DataField>
+        <Field Name="PhotoCellID">
+          <DataField>PhotoCellID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TOTAL_BAG">
+          <DataField>TOTAL_BAG</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Unkown_Bags_Cnt">
-          <DataField>Unkown_Bags_Cnt</DataField>
+        <Field Name="MISS">
+          <DataField>MISS</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Jam_cnt">
-          <DataField>Jam_cnt</DataField>
+        <Field Name="UNKNOWN">
+          <DataField>UNKNOWN</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BJAM">
+          <DataField>BJAM</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MSBJ">
+          <DataField>MSBJ</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestJamPhotocell">
+    <DataSet Name="dsJamPhotocell">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_7_TrackingJamPhotocell;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SubSystem">
+            <Value>=Parameters!Subsystem.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_EquipOperation_JAMPHOTOCELL</CommandText>
       </Query>
       <Fields>
-        <Field Name="Photocell_id">
-          <DataField>Photocell_id</DataField>
+        <Field Name="SUBSYSTEM">
+          <DataField>SUBSYSTEM</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Jam_cnt">
-          <DataField>Jam_cnt</DataField>
+        <Field Name="PhotoCellID">
+          <DataField>PhotoCellID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JAM_BAGS">
+          <DataField>JAM_BAGS</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestHSPD">
+    <DataSet Name="dsHSPD">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_OKC_2_HSPD;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SubSystem">
+            <Value>=Parameters!Subsystem.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_EquipOperation_HSPD</CommandText>
       </Query>
       <Fields>
-        <Field Name="HSPD_id">
-          <DataField>HSPD_id</DataField>
+        <Field Name="SUBSYSTEM">
+          <DataField>SUBSYSTEM</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Cycles">
-          <DataField>Cycles</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Jams">
-          <DataField>Jams</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Failed">
-          <DataField>Failed</DataField>
+        <Field Name="DIVERTER_ID">
+          <DataField>DIVERTER_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="E_stop">
-          <DataField>E_stop</DataField>
+        <Field Name="EXTENDED_CNT">
+          <DataField>EXTENDED_CNT</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="HOME_CNT">
+          <DataField>HOME_CNT</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dsSubsystem">
+      <Query>
+        <DataSourceName>PGLBHSDB</DataSourceName>
+        <CommandText>SELECT SUBSYSTEM
+FROM SUBSYSTEMS</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="SUBSYSTEM">
+          <DataField>SUBSYSTEM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -3067,6 +2964,7 @@ GROUP BY ALM_ALMEXTFLD2</CommandText>
         </DataSetReference>
       </DefaultValue>
       <Prompt>Date Basic :</Prompt>
+      <Hidden>true</Hidden>
       <ValidValues>
         <DataSetReference>
           <DataSetName>dsDateBasic</DataSetName>
@@ -3098,9 +2996,21 @@ GROUP BY ALM_ALMEXTFLD2</CommandText>
       </DefaultValue>
       <Prompt>To :</Prompt>
     </ReportParameter>
+    <ReportParameter Name="Subsystem">
+      <DataType>String</DataType>
+      <Prompt>Subsystem</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsSubsystem</DataSetName>
+          <ValueField>SUBSYSTEM</ValueField>
+          <LabelField>SUBSYSTEM</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Mm</rd:ReportUnitType>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>c3fc41bd-6fab-4090-8db5-95be54415bb6</rd:ReportID>
 </Report>

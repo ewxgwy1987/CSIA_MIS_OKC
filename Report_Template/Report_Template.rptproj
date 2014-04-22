@@ -14,8 +14,8 @@
       <FullPath>01 ThroughputReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>02 EquipOperationalSummary.rdl</Name>
-      <FullPath>02 EquipOperationalSummary.rdl</FullPath>
+      <Name>Z OLD 02 EquipOperationalSummary.rdl</Name>
+      <FullPath>Z OLD 02 EquipOperationalSummary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>03 EquipmentMalfunctionandCorrectionReport.rdl</Name>
@@ -42,8 +42,8 @@
       <FullPath>08 RunoutReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>09 IndivEDSStatusReport.rdl</Name>
-      <FullPath>09 IndivEDSStatusReport.rdl</FullPath>
+      <Name>Z OLD 09 IndivEDSStatusReport.rdl</Name>
+      <FullPath>Z OLD 09 IndivEDSStatusReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>10 ATRReport.rdl</Name>
@@ -70,20 +70,20 @@
       <FullPath>15 BSMReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>16 ComputerAndPLCStatusReport.rdl</Name>
-      <FullPath>16 ComputerAndPLCStatusReport.rdl</FullPath>
+      <Name>Z OLD 16 ComputerAndPLCStatusReport.rdl</Name>
+      <FullPath>Z OLD 16 ComputerAndPLCStatusReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>17 IndivPLCStatusReport.rdl</Name>
-      <FullPath>17 IndivPLCStatusReport.rdl</FullPath>
+      <Name>Z OLD 17 IndivPLCStatusReport.rdl</Name>
+      <FullPath>Z OLD 17 IndivPLCStatusReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>18 BagDataReport.rdl</Name>
       <FullPath>18 BagDataReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>19 EDSStatisticsReport.rdl</Name>
-      <FullPath>19 EDSStatisticsReport.rdl</FullPath>
+      <Name>Z OLD 19 EDSStatisticsReport.rdl</Name>
+      <FullPath>Z OLD 19 EDSStatisticsReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>20 CriticalTrackingPECReport.rdl</Name>
@@ -404,6 +404,26 @@
     <ProjectItem>
       <Name>Z OLD_18 BagDataReport.rdl</Name>
       <FullPath>Z OLD_18 BagDataReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>02 EquipOperationalSummary.rdl</Name>
+      <FullPath>02 EquipOperationalSummary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>09 IndivEDSStatusReport.rdl</Name>
+      <FullPath>09 IndivEDSStatusReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>16 ComputerandPLCStatusReport.rdl</Name>
+      <FullPath>16 ComputerandPLCStatusReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>17 IndivPLCStatusReport.rdl</Name>
+      <FullPath>17 IndivPLCStatusReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>19 EDSStatisticsReport.rdl</Name>
+      <FullPath>19 EDSStatisticsReport.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

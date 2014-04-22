@@ -1,5 +1,5 @@
 GO
-USE [BHSDB_OKC];
+USE [BHSDB_CLT];
 GO
 
 CREATE PROCEDURE dbo.stp_RPT_OKC_SysCommBehavior

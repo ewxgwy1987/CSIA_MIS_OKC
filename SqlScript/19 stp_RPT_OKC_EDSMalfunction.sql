@@ -1,8 +1,8 @@
 GO
-USE [BHSDB];
+USE [BHSDB_OKC];
 GO
 
-ALTER PROCEDURE dbo.stp_RPT21_EDSMalfunction
+create PROCEDURE dbo.stp_RPT_OKC_EDSMalfunction
 		  @DTFrom datetime, 
 		  @DTTo datetime
 AS
