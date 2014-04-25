@@ -2494,7 +2494,7 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="PGLBHSDB">
-      <DataSourceReference>PGLBHSDB_NEW</DataSourceReference>
+      <DataSourceReference>IRELBHSDB</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>9a6c5141-08eb-4401-83b5-7c8aea807afa</rd:DataSourceID>
     </DataSource>

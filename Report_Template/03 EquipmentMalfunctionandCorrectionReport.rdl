@@ -1910,9 +1910,8 @@
             </Textbox>
             <Line Name="line1">
               <Top>30.23611mm</Top>
-              <Left>0.01793in</Left>
               <Height>0mm</Height>
-              <Width>125.54458mm</Width>
+              <Width>126mm</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>
@@ -2353,12 +2352,12 @@
       </ReportItems>
       <Style />
     </PageHeader>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>20mm</LeftMargin>
-    <RightMargin>20mm</RightMargin>
-    <TopMargin>20mm</TopMargin>
-    <BottomMargin>20mm</BottomMargin>
+    <PageHeight>27.94cm</PageHeight>
+    <PageWidth>21.59cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
     <Style>
       <Border>
         <Style>None</Style>

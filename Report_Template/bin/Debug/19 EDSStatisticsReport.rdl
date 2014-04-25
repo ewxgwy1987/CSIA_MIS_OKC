@@ -9,10 +9,10 @@
               <Width>1.36988in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.56989in</Width>
+              <Width>1.33405in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.56116in</Width>
+              <Width>1.40156in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.20749in</Width>
@@ -21,7 +21,7 @@
               <Width>0.60345in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.66134in</Width>
+              <Width>0.63144in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -384,9 +384,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <ZIndex>19</ZIndex>
@@ -424,7 +422,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                         <Paragraph>
@@ -438,7 +436,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -461,7 +459,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox40">
+                    <Textbox Name="Textbox39">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -476,7 +474,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                         <Paragraph>
@@ -490,7 +488,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -623,7 +621,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.MyTimeFormat(sum(Fields!operation_duration.Value))</Value>
+                              <Value>=Code.MyTimeFormat(sum(Fields!OPER_DURATION.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -631,7 +629,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -658,7 +656,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=sum(Fields!Bag_Alarmed.Value)
+                              <Value>=sum(Fields!BAGS_ALARM.Value)
 '=count(Fields!ALM_STARTTIME.Value,"Operation")</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
@@ -667,7 +665,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -695,7 +693,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=sum(Fields!Bag_Cleared.Value)
+                              <Value>=sum(Fields!BAGS_CLEAR.Value)
 
 '=count(Fields!ALM_ENDTIME.Value,"Operation")</Value>
                               <Style>
@@ -705,7 +703,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -771,7 +769,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!operation_starttime.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!OPER_STARTTIME.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -801,7 +799,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!operation_endtime.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!OPER_ENDTIME.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -834,14 +832,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIF(IsNothing(Fields!operation_duration.Value), "---",Code.MyTimeFormat(Fields!operation_duration.Value))</Value>
+                              <Value>=IIF(IsNothing(Fields!OPER_DURATION.Value), "---",Code.MyTimeFormat(Fields!OPER_DURATION.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -867,7 +865,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bag_Alarmed.Value</Value>
+                              <Value>=Fields!BAGS_ALARM.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -875,7 +873,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -896,14 +894,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox41">
+                    <Textbox Name="Textbox40">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Bag_Cleared.Value</Value>
+                              <Value>=Fields!BAGS_CLEAR.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -911,7 +909,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1044,14 +1042,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox116">
+                    <Textbox Name="lblTotal2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>Total :</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1063,7 +1061,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox116</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
                       <Style>
                         <TopBorder>
                           <Color>Black</Color>
@@ -1087,7 +1085,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=sum( Fields!Bag_Alarmed.Value,"dsTestEDSFault")
+                              <Value>=sum( Fields!BAGS_ALARM.Value,"dsEDSOperation")
 '=count(Fields!ALM_STARTTIME.Value,"Operation")</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
@@ -1096,7 +1094,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1117,14 +1115,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox42">
+                    <Textbox Name="Textbox44">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=sum( Fields!Bag_Cleared.Value,"dsTestEDSFault")
+                              <Value>=sum(Fields!BAGS_CLEAR.Value,"dsEDSOperation")
 
 
 '=count(Fields!ALM_ENDTIME.Value,"Operation")</Value>
@@ -1135,7 +1133,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1197,16 +1195,12 @@
                   <Group Name="ALM_STARTTIME" />
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!operation_starttime.Value</Value>
+                      <Value>=Fields!OPER_STARTTIME.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
                     <TablixMember />
                   </TablixMembers>
-                  <Visibility>
-                    <Hidden>true</Hidden>
-                    <ToggleItem>tbxEDS_ID</ToggleItem>
-                  </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
@@ -1214,11 +1208,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <RepeatRowHeaders>true</RepeatRowHeaders>
-        <DataSetName>dsTestEDSOperation</DataSetName>
+        <DataSetName>dsEDSOperation</DataSetName>
         <Top>0.3175cm</Top>
         <Left>1.46155mm</Left>
         <Height>1.29568in</Height>
-        <Width>6.97321in</Width>
+        <Width>6.54787in</Width>
         <Style />
       </Tablix>
       <Tablix Name="table2">
@@ -1228,10 +1222,10 @@
               <Width>1.36087in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.58938in</Width>
+              <Width>1.35354in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.56116in</Width>
+              <Width>1.40156in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.20749in</Width>
@@ -1667,7 +1661,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!fault_starttime.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!ALM_STARTTIME.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1697,7 +1691,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!fault_endtime.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
+                              <Value>=Format(Fields!ALM_ENDTIME.Value, Parameters!DFormat.Value + " " + Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1730,7 +1724,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!fault_description.Value</Value>
+                              <Value>=Fields!ALM_DESCRIPTION.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1871,14 +1865,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="lblTotal2">
+                    <Textbox Name="Textbox63">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total :</Value>
+                              <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1890,7 +1884,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <ZIndex>5</ZIndex>
+                      <rd:DefaultName>Textbox63</rd:DefaultName>
                       <Style>
                         <TopBorder>
                           <Color>Black</Color>
@@ -1948,16 +1942,12 @@
                   <Group Name="ALM_STARTTIME2" />
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!EDS_ID.Value</Value>
+                      <Value>=Fields!ALM_STARTTIME.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
                     <TablixMember />
                   </TablixMembers>
-                  <Visibility>
-                    <Hidden>true</Hidden>
-                    <ToggleItem>ALM_ALMEXTFLD3</ToggleItem>
-                  </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
@@ -1966,16 +1956,16 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestEDSFault</DataSetName>
+        <DataSetName>dsEDSFault</DataSetName>
         <Top>3.71313cm</Top>
         <Left>1.19534mm</Left>
         <Height>1.29568in</Height>
-        <Width>5.7189in</Width>
+        <Width>5.32346in</Width>
         <ZIndex>1</ZIndex>
         <Style />
       </Tablix>
     </ReportItems>
-    <Height>2.90713in</Height>
+    <Height>7.38411cm</Height>
     <Style>
       <TopBorder>
         <Color>Black</Color>
@@ -1985,10 +1975,10 @@
       </BottomBorder>
     </Style>
   </Body>
-  <Width>7.07774in</Width>
+  <Width>16.8927cm</Width>
   <Page>
     <PageHeader>
-      <Height>1.79351in</Height>
+      <Height>5.16416cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2083,8 +2073,8 @@
               </Style>
             </Textbox>
             <Line Name="lnPHeaderVSeparator">
-              <Left>135.525mm</Left>
-              <Height>42.703mm</Height>
+              <Left>126mm</Left>
+              <Height>48.87768mm</Height>
               <Width>0mm</Width>
               <ZIndex>3</ZIndex>
               <Style>
@@ -2112,7 +2102,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.35436in</Top>
-              <Left>6.00562in</Left>
+              <Left>5.63062in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
               <ZIndex>4</ZIndex>
@@ -2141,7 +2131,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.63in</Top>
-              <Left>5.37562in</Left>
+              <Left>5.00062in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>5</ZIndex>
@@ -2170,7 +2160,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.07875in</Top>
-              <Left>5.37562in</Left>
+              <Left>5.00062in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>6</ZIndex>
@@ -2199,7 +2189,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.35436in</Top>
-              <Left>5.37562in</Left>
+              <Left>5.00062in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>7</ZIndex>
@@ -2229,7 +2219,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.62999in</Top>
-              <Left>6.00562in</Left>
+              <Left>5.63062in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
               <ZIndex>8</ZIndex>
@@ -2260,7 +2250,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.07875in</Top>
-              <Left>6.00562in</Left>
+              <Left>5.63062in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
               <ZIndex>9</ZIndex>
@@ -2335,7 +2325,7 @@
             <Line Name="line1">
               <Top>32.525mm</Top>
               <Height>0mm</Height>
-              <Width>135.525mm</Width>
+              <Width>126mm</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -2382,7 +2372,7 @@
               <Value>=First(Fields!PIC_IMAGE.Value, "dsReportLogo")</Value>
               <MIMEType>image/gif</MIMEType>
               <Sizing>Fit</Sizing>
-              <Top>2.00025mm</Top>
+              <Top>2mm</Top>
               <Left>2.00025mm</Left>
               <Height>27.47222mm</Height>
               <Width>30mm</Width>
@@ -2400,8 +2390,8 @@
           <DataElementOutput>ContentsOnly</DataElementOutput>
           <Top>1mm</Top>
           <Left>1mm</Left>
-          <Height>42.703mm</Height>
-          <Width>177.581mm</Width>
+          <Height>48.87768mm</Height>
+          <Width>166.77742mm</Width>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -2425,7 +2415,7 @@
       <Style />
     </PageHeader>
     <PageFooter>
-      <Height>1in</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2461,7 +2451,7 @@
           <Top>0.02778in</Top>
           <Left>0.03937in</Left>
           <Height>0.90209in</Height>
-          <Width>6.99138in</Width>
+          <Width>6.53614in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -2484,12 +2474,13 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>11.69in</PageHeight>
-    <PageWidth>8.27in</PageWidth>
-    <LeftMargin>0.7874in</LeftMargin>
-    <RightMargin>0.7874in</RightMargin>
-    <TopMargin>0.7874in</TopMargin>
-    <BottomMargin>0.7874in</BottomMargin>
+    <PageHeight>27.94cm</PageHeight>
+    <PageWidth>21.59cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>1.27cm</ColumnSpacing>
     <Style>
       <Border>
         <Style>None</Style>
@@ -2542,70 +2533,6 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsMain">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT ALM_ALMAREA1, 
-case ALM_ALMAREA2
-	when 'AA_BJAM' then 'Operation'
-	--when 'AA_XMAL' then 'Fault'
-	else 'Fault'
-end as Machine_Status,
-ALM_ALMEXTFLD2, ALM_STARTTIME, ALM_ENDTIME, ALM_MSGDESC
-FROM MDS_ALARMS
-WHERE (ALM_UNCERTAIN = 0) 
-AND (ALM_STARTTIME BETWEEN @DTFrom AND @DTTo) 
---AND (ALM_ALMAREA2 = 'AA_NDAL') 
-AND (ALM_ALMEXTFLD2 LIKE 'EDS%') 
-ORDER BY ALM_STARTTIME;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="ALM_ALMAREA1">
-          <DataField>ALM_ALMAREA1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ALM_ALMEXTFLD2">
-          <DataField>ALM_ALMEXTFLD2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Machine_Status">
-          <DataField>Machine_Status</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ALM_STARTTIME">
-          <DataField>ALM_STARTTIME</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ALM_ENDTIME">
-          <DataField>ALM_ENDTIME</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ALM_MSGDESC">
-          <DataField>ALM_MSGDESC</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CALC_DURATION">
-          <Value>=IIf(Trim(Fields!ALM_ENDTIME.Value)="", 0, DateDiff("s",Fields!ALM_STARTTIME.Value,Fields!ALM_ENDTIME.Value))</Value>
-        </Field>
-        <Field Name="CALC_HOUR">
-          <Value>=IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format(Fields!CALC_DURATION.Value\3600, "00"))</Value>
-        </Field>
-        <Field Name="CALC_MINUTE">
-          <Value>= IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format((Fields!CALC_DURATION.Value - (Cint(Fields!CALC_HOUR.Value)*3600)) \ 60, "00") )</Value>
-        </Field>
-        <Field Name="CALC_SECOND">
-          <Value>= IIf(Trim(Fields!ALM_ENDTIME.Value)="", "00", Format(Fields!CALC_DURATION.Value - Cint(Fields!CALC_HOUR.Value) * 3600 - Cint(Fields!CALC_MINUTE.Value) * 60,"00"))</Value>
-        </Field>
-      </Fields>
-    </DataSet>
     <DataSet Name="dsDateBasic">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
@@ -2646,66 +2573,81 @@ ORDER BY ALM_STARTTIME;</CommandText>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestEDSOperation">
+    <DataSet Name="dsEDSOperation">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_TEST_OKC19_EDSStatistics_Operation;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_EDSOperation</CommandText>
       </Query>
       <Fields>
         <Field Name="EDS_ID">
           <DataField>EDS_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="operation_starttime">
-          <DataField>operation_starttime</DataField>
+        <Field Name="OPER_STARTTIME">
+          <DataField>OPER_STARTTIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="operation_endtime">
-          <DataField>operation_endtime</DataField>
+        <Field Name="OPER_ENDTIME">
+          <DataField>OPER_ENDTIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="Bag_Alarmed">
-          <DataField>Bag_Alarmed</DataField>
+        <Field Name="OPER_DURATION">
+          <DataField>OPER_DURATION</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="operation_duration">
-          <Value>=IIf(Trim(Fields!operation_endtime.Value)="", 0, DateDiff("s",Fields!operation_starttime.Value,Fields!operation_endtime.Value))</Value>
+        <Field Name="BAGS_ALARM">
+          <DataField>BAGS_ALARM</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Bag_Cleared">
-          <DataField>Bag_Cleared</DataField>
+        <Field Name="BAGS_CLEAR">
+          <DataField>BAGS_CLEAR</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestEDSFault">
+    <DataSet Name="dsEDSFault">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from RPT_TEST_OKC19_EDSStatistics_Fault;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_EDSMalfunction</CommandText>
       </Query>
       <Fields>
+        <Field Name="ALM_SUBSYSTEM">
+          <DataField>ALM_SUBSYSTEM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="EDS_ID">
           <DataField>EDS_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fault_starttime">
-          <DataField>fault_starttime</DataField>
+        <Field Name="ALM_STARTTIME">
+          <DataField>ALM_STARTTIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="fault_endtime">
-          <DataField>fault_endtime</DataField>
+        <Field Name="ALM_ENDTIME">
+          <DataField>ALM_ENDTIME</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="fault_description">
-          <DataField>fault_description</DataField>
+        <Field Name="ALM_DESCRIPTION">
+          <DataField>ALM_DESCRIPTION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Bag_Alarmed">
-          <DataField>Bag_Alarmed</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Bag_Cleared">
-          <DataField>Bag_Cleared</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -2793,6 +2735,6 @@ End Function
 </Code>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>c3fc41bd-6fab-4090-8db5-95be54415bb6</rd:ReportID>
 </Report>

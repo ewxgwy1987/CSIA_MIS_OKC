@@ -265,7 +265,7 @@
                     <Textbox Name="lblEquipId5">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!Workstation_id.Value</SortExpression>
+                        <SortExpression>=Fields!EQUIP_ID.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -346,7 +346,7 @@
                     <Textbox Name="Textbox4">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!Computer_status.Value</SortExpression>
+                        <SortExpression>=Fields!WORKING_STATUS.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -392,14 +392,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Workstation_id">
+                    <Textbox Name="EQUIP_ID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Workstation_id.Value</Value>
+                              <Value>=Fields!EQUIP_ID.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -411,7 +411,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Workstation_id</rd:DefaultName>
+                      <rd:DefaultName>EQUIP_ID</rd:DefaultName>
                       <ZIndex>7</ZIndex>
                       <Style>
                         <Border>
@@ -428,22 +428,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ONSTATUS">
+                    <Textbox Name="ONOFF_STATUS">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=iif(isNothing(Fields!Online_status.Value),"-",
-iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value xml:space="preserve"> </Value>
+                              <Value>=Fields!ONOFF_STATUS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -455,7 +447,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ONSTATUS</rd:DefaultName>
+                      <rd:DefaultName>ONOFF_STATUS</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -471,14 +463,14 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Computer_status">
+                    <Textbox Name="WORKING_STATUS">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Computer_status.Value</Value>
+                              <Value>=Fields!WORKING_STATUS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -490,7 +482,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Computer_status</rd:DefaultName>
+                      <rd:DefaultName>WORKING_STATUS</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -660,7 +652,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
               <Group Name="EQUIPID" />
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!Workstation_id.Value</Value>
+                  <Value>=Fields!EQUIP_ID.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -672,7 +664,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestComputerStatus</DataSetName>
+        <DataSetName>dsComputerStatus</DataSetName>
         <Left>1.46155mm</Left>
         <Height>1.1811in</Height>
         <Width>6.51796in</Width>
@@ -704,7 +696,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>PLC BANK</Value>
+                              <Value>PLC Bank</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -821,7 +813,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                     <Textbox Name="lblEquipId7">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!PLCBank_id.Value</SortExpression>
+                        <SortExpression>=Fields!EQUIP_ID.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -844,7 +836,6 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
-                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1.5pt</Width>
                         </BottomBorder>
@@ -903,7 +894,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                     <Textbox Name="Textbox15">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!PLCBank_status.Value</SortExpression>
+                        <SortExpression>=Fields!WORKING_STATUS.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -949,14 +940,14 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PLCBank_id">
+                    <Textbox Name="EQUIP_ID1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PLCBank_id.Value</Value>
+                              <Value>=Fields!EQUIP_ID.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -966,7 +957,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PLCBank_id</rd:DefaultName>
+                      <rd:DefaultName>EQUIP_ID1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -993,14 +984,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=iif(isNothing(Fields!Online_status.Value), "-", iif(Fields!Online_status.Value = 1, "Online", "Offline"))</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value xml:space="preserve">  </Value>
+                              <Value>=Fields!ONOFF_STATUS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1028,14 +1012,14 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PLCBank_status">
+                    <Textbox Name="WORKING_STATUS1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PLCBank_status.Value</Value>
+                              <Value>=Fields!WORKING_STATUS.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1047,7 +1031,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PLCBank_status</rd:DefaultName>
+                      <rd:DefaultName>WORKING_STATUS1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1217,7 +1201,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
               <Group Name="EQUIPID1" />
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!PLCBank_id.Value</Value>
+                  <Value>=Fields!EQUIP_ID.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -1229,7 +1213,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
             <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestPLCBank</DataSetName>
+        <DataSetName>dsPLCBank</DataSetName>
         <Top>2.24729in</Top>
         <Left>1.46155mm</Left>
         <Height>0.94488in</Height>
@@ -1263,7 +1247,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SORT CONTROLLER</Value>
+                              <Value>Sort Controller</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1380,7 +1364,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                     <Textbox Name="lblEquipId6">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!SortController_id.Value</SortExpression>
+                        <SortExpression>=Fields!APP_CODE.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1461,7 +1445,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                     <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!Controller_status.Value</SortExpression>
+                        <SortExpression>=Fields!LIVE_STATUS_TYPE.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1514,7 +1498,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!SortController_id.Value</Value>
+                              <Value>=Fields!APP_CODE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1550,15 +1534,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=iif(isNothing(Fields!Online_status.Value),"-",
-iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value xml:space="preserve">  </Value>
+                              <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1593,7 +1569,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Controller_status.Value</Value>
+                              <Value>=Fields!LIVE_STATUS_TYPE.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -1770,7 +1746,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
               <Group Name="EQUIPID2" />
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!SortController_id.Value</Value>
+                  <Value>=Fields!APP_CODE.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -1782,7 +1758,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestSortController</DataSetName>
+        <DataSetName>dsSortController</DataSetName>
         <Top>3.16674cm</Top>
         <Left>1.46155mm</Left>
         <Height>0.94488in</Height>
@@ -1819,7 +1795,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>UPS STATUS</Value>
+                              <Value>UPS Status</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1976,7 +1952,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                     <Textbox Name="lblEquipId8">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!UPS_id.Value</SortExpression>
+                        <SortExpression>=Fields!EQUIP_ID.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1999,7 +1975,6 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
-                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1.5pt</Width>
                         </BottomBorder>
@@ -2022,7 +1997,21 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>UPS CHARGE PERCENTAGE</Value>
+                              <Value>UPS Charge</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Percentage</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -2058,7 +2047,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                     <Textbox Name="Textbox17">
                       <CanGrow>true</CanGrow>
                       <UserSort>
-                        <SortExpression>=Fields!UPS_status.Value</SortExpression>
+                        <SortExpression>=Fields!EQUIP_ID.Value</SortExpression>
                       </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2083,7 +2072,6 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
-                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1.5pt</Width>
                         </BottomBorder>
@@ -2106,7 +2094,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>RUN TIME REMAIN</Value>
+                              <Value>Run Time Remain</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -2166,7 +2154,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!UPS_id.Value</Value>
+                              <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -2203,7 +2191,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Charge_Percentage.Value*100 &amp; "%"</Value>
+                              <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -2239,7 +2227,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!UPS_status.Value</Value>
+                              <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -2278,7 +2266,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.MyTimeFormat(Fields!Runtime_Remainning.Value)</Value>
+                              <Value />
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -2501,7 +2489,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
               <Group Name="EQUIPID3" />
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!UPS_id.Value</Value>
+                  <Value>=Fields!EQUIP_ID.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -2513,12 +2501,15 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
             <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestUPSStatus</DataSetName>
+        <DataSetName>dsPLCBank</DataSetName>
         <Top>3.24784in</Top>
         <Left>1.46169mm</Left>
         <Height>1.06988in</Height>
         <Width>6.51796in</Width>
         <ZIndex>3</ZIndex>
+        <Visibility>
+          <Hidden>true</Hidden>
+        </Visibility>
         <Style />
       </Tablix>
     </ReportItems>
@@ -2535,15 +2526,15 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
   <Width>168.20538mm</Width>
   <Page>
     <PageHeader>
-      <Height>42.29582mm</Height>
+      <Height>39.73541mm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
         <Rectangle Name="rectangle1">
           <ReportItems>
             <Line Name="lnPHeaderVSeparator">
-              <Left>127mm</Left>
-              <Height>41.29582mm</Height>
+              <Left>126mm</Left>
+              <Height>36.97152mm</Height>
               <Width>0mm</Width>
               <Style>
                 <Border>
@@ -2570,7 +2561,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.35436in</Top>
-              <Left>5.66999in</Left>
+              <Left>5.63062in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
               <ZIndex>1</ZIndex>
@@ -2599,7 +2590,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.63in</Top>
-              <Left>5.03999in</Left>
+              <Left>5.00062in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>2</ZIndex>
@@ -2628,7 +2619,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.07875in</Top>
-              <Left>5.03999in</Left>
+              <Left>5.00062in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>3</ZIndex>
@@ -2657,7 +2648,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.35436in</Top>
-              <Left>5.03999in</Left>
+              <Left>5.00062in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>4</ZIndex>
@@ -2687,7 +2678,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.62999in</Top>
-              <Left>5.66999in</Left>
+              <Left>5.63062in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
               <ZIndex>5</ZIndex>
@@ -2718,7 +2709,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.07875in</Top>
-              <Left>5.66999in</Left>
+              <Left>5.63062in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
               <ZIndex>6</ZIndex>
@@ -2751,7 +2742,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>2mm</Top>
-              <Left>1.37812in</Left>
+              <Left>1.33875in</Left>
               <Height>6mm</Height>
               <Width>88mm</Width>
               <ZIndex>7</ZIndex>
@@ -2779,7 +2770,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>9mm</Top>
-              <Left>1.37812in</Left>
+              <Left>1.33875in</Left>
               <Height>6mm</Height>
               <Width>88mm</Width>
               <ZIndex>8</ZIndex>
@@ -2791,9 +2782,9 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
               </Style>
             </Textbox>
             <Line Name="line1">
-              <Top>31.91458mm</Top>
+              <Top>32.525mm</Top>
               <Height>0mm</Height>
-              <Width>127mm</Width>
+              <Width>126mm</Width>
               <ZIndex>9</ZIndex>
               <Style>
                 <Border>
@@ -2807,7 +2798,7 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
               <MIMEType>image/gif</MIMEType>
               <Sizing>Fit</Sizing>
               <Top>2mm</Top>
-              <Left>1.46169mm</Left>
+              <Left>2.24036mm</Left>
               <Height>27.47222mm</Height>
               <Width>30mm</Width>
               <ZIndex>10</ZIndex>
@@ -2823,9 +2814,9 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
           </PageBreak>
           <DataElementOutput>ContentsOnly</DataElementOutput>
           <Top>1mm</Top>
-          <Left>0mm</Left>
-          <Height>41.29582mm</Height>
-          <Width>167.01787mm</Width>
+          <Left>1mm</Left>
+          <Height>36.97152mm</Height>
+          <Width>166.01787mm</Width>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -2848,72 +2839,12 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
       </ReportItems>
       <Style />
     </PageHeader>
-    <PageFooter>
-      <Height>2.80459cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="Textbox313">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>WARNING: </Value>
-                  <Style>
-                    <FontFamily>Times New Roman</FontFamily>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>THIS RECORD CONTAINS SENSITIVE SECURITY INFORMATION THAT IS CONTROLLED UNDER 49 CFR PARTS 15 AND 1520. NO PART OF THIS RECORD MAY BE DISCLOSED TO PERSONS WITHOUT A "NEED TO KNOW", AS DEFINED IN 49 CFR PARTS 15 AND 1520, EXCEPT WITH THE WRITTEN PERMISSION OF THE ADMINISTRATOR OF THE TRANSPORTATION SECURITY ADMINISTRATION OR SECRETARY OF TRANSPORTATION. UNAUTHORIZED RELEASE MAY RESULT IN CIVIL PENALTY OR OTHER ACTION. FOR U.S. GOVERNMENT AGENCIES, PUBLIC DISCLOSURE IS GOVERNED BY 5 U.S.C. 552 AND 49 CFR PARTS 15 AND 1520.</Value>
-                  <Style>
-                    <FontFamily>Times New Roman</FontFamily>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Normal</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>General</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox313</rd:DefaultName>
-          <Top>0.075in</Top>
-          <Left>0.05123in</Left>
-          <Height>0.96459in</Height>
-          <Width>6.51979in</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <TopBorder>
-              <Color>Black</Color>
-              <Style>Solid</Style>
-              <Width>1.5pt</Width>
-            </TopBorder>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageFooter>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>20mm</LeftMargin>
-    <RightMargin>20mm</RightMargin>
-    <TopMargin>20mm</TopMargin>
-    <BottomMargin>20mm</BottomMargin>
+    <PageHeight>27.94cm</PageHeight>
+    <PageWidth>21.59cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
     <Style>
       <Border>
         <Style>None</Style>
@@ -2946,64 +2877,6 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsComputerMain">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_rpt_compuTERSTATUS</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="SUBSYSTEM">
-          <DataField>SUBSYSTEM</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="EQUIPID">
-          <DataField>EQUIPID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ONSTATUS">
-          <DataField>ONSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OFFSTATUS">
-          <DataField>OFFSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CURSTATUS">
-          <DataField>CURSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsPLCStatus">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_rpt_plcstATUS</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="SUBSYSTEM">
-          <DataField>SUBSYSTEM</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="EQUIPID">
-          <DataField>EQUIPID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ONSTATUS">
-          <DataField>ONSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OFFSTATUS">
-          <DataField>OFFSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CURSTATUS">
-          <DataField>CURSTATUS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
     <DataSet Name="dsDTFormat">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
@@ -3021,62 +2894,90 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestComputerStatus">
+    <DataSet Name="dsComputerStatus">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from PRT_TEST_OKC16_ComputerStatus;</CommandText>
+        <CommandText>SELECT	STA.LOCATION AS EQUIP_ID, 
+		LTRIM(RTRIM(STAL.DESCRIPTION))  AS 'ONOFF_STATUS',
+		CASE STAL.DESCRIPTION
+			WHEN 'OFFLINE' THEN 'Standby' 
+			WHEN 'ONLINE' THEN 'Running'
+		END	AS 'WORKING_STATUS'
+FROM	MDS_STATUS STA, MDS_STATUS_LK STAL
+WHERE	STA.TYPE='NETWORK' 
+	AND STA.TYPE=STAL.TYPE 
+	AND STA.TYPE_STATUS=STAL.TYPE_STATUS 
+	AND LTRIM(RTRIM(STA.STATUS))=LTRIM(RTRIM(STAL.FIX))
+	AND STAL.DESC_TYPE='FIX'
+	AND (STA.LOCATION LIKE 'MES%' 
+		OR STA.LOCATION LIKE '%MDS%' 
+		OR STA.LOCATION LIKE 'SAC%'
+		OR STA.LOCATION LIKE 'MON%'
+		OR STA.LOCATION LIKE 'OWS%')
+ORDER BY STA.LOCATION</CommandText>
       </Query>
       <Fields>
-        <Field Name="Workstation_id">
-          <DataField>Workstation_id</DataField>
+        <Field Name="EQUIP_ID">
+          <DataField>EQUIP_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Online_status">
-          <DataField>Online_status</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="ONOFF_STATUS">
+          <DataField>ONOFF_STATUS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Computer_status">
-          <DataField>Computer_status</DataField>
+        <Field Name="WORKING_STATUS">
+          <DataField>WORKING_STATUS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestSortController">
+    <DataSet Name="dsSortController">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from PRT_TEST_OKC16_SortController;</CommandText>
+        <CommandText>SELECT APP_CODE, LIVE_STATUS_TYPE
+FROM APP_LIVE_MONITORING
+WHERE APP_CODE LIKE 'BHSDB%' OR APP_CODE LIKE 'MDS%' OR APP_CODE LIKE 'SAC%'</CommandText>
       </Query>
       <Fields>
-        <Field Name="SortController_id">
-          <DataField>SortController_id</DataField>
+        <Field Name="APP_CODE">
+          <DataField>APP_CODE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Online_status">
-          <DataField>Online_status</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Controller_status">
-          <DataField>Controller_status</DataField>
+        <Field Name="LIVE_STATUS_TYPE">
+          <DataField>LIVE_STATUS_TYPE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestPLCBank">
+    <DataSet Name="dsPLCBank">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from PRT_TEST_OKC16_PLCBank;</CommandText>
+        <CommandText>SELECT	STA.LOCATION AS EQUIP_ID, 
+		LTRIM(RTRIM(STAL.DESCRIPTION))  AS 'ONOFF_STATUS',
+		CASE STAL.DESCRIPTION
+			WHEN 'OFFLINE' THEN 'Standby' 
+			WHEN 'ONLINE' THEN 'Running'
+		END	AS 'WORKING_STATUS'
+FROM	MDS_STATUS STA, MDS_STATUS_LK STAL
+WHERE	STA.TYPE='NETWORK' 
+	AND STA.TYPE=STAL.TYPE 
+	AND STA.TYPE_STATUS=STAL.TYPE_STATUS 
+	AND LTRIM(RTRIM(STA.STATUS))=LTRIM(RTRIM(STAL.FIX))
+	AND STAL.DESC_TYPE='FIX'
+	AND STA.LOCATION LIKE 'PLC%'
+ORDER BY STA.LOCATION</CommandText>
       </Query>
       <Fields>
-        <Field Name="PLCBank_id">
-          <DataField>PLCBank_id</DataField>
+        <Field Name="EQUIP_ID">
+          <DataField>EQUIP_ID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Online_status">
-          <DataField>Online_status</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="ONOFF_STATUS">
+          <DataField>ONOFF_STATUS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PLCBank_status">
-          <DataField>PLCBank_status</DataField>
+        <Field Name="WORKING_STATUS">
+          <DataField>WORKING_STATUS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -3084,24 +2985,32 @@ iif(Fields!Online_status.Value=1,"Online","Offline"))</Value>
     <DataSet Name="dsTestUPSStatus">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>select * from PRT_TEST_OKC16_UPSStatus;</CommandText>
+        <CommandText>select * from MIS_EQUIP_LIVE_MONITOR</CommandText>
       </Query>
       <Fields>
-        <Field Name="UPS_id">
-          <DataField>UPS_id</DataField>
+        <Field Name="SUBSYSTEM">
+          <DataField>SUBSYSTEM</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Charge_Percentage">
-          <DataField>Charge_Percentage</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="UPS_status">
-          <DataField>UPS_status</DataField>
+        <Field Name="CATEGORY">
+          <DataField>CATEGORY</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Runtime_Remainning">
-          <DataField>Runtime_Remainning</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="EQUIP_ID">
+          <DataField>EQUIP_ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STATUS_CLASS">
+          <DataField>STATUS_CLASS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UPDATE_TIME_STAMP">
+          <DataField>UPDATE_TIME_STAMP</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CURRENT_STATUS">
+          <DataField>CURRENT_STATUS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>

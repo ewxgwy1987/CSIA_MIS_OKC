@@ -1,5 +1,5 @@
 GO
-USE [BHSDB_CLT];
+USE [BHSDB_OKC];
 GO
 
 CREATE PROCEDURE dbo.stp_RPT_OKC_SysCommBehavior
@@ -7,7 +7,7 @@ CREATE PROCEDURE dbo.stp_RPT_OKC_SysCommBehavior
 		  @DTTo datetime
 AS
 BEGIN
-	DECLARE @FaultType varchar(max)='';
+	DECLARE @FaultType varchar(max)='AA_NDAL';
 
 	SELECT	ALM_ALMEXTFLD2 AS ALARM_EQUIPMENTID, --AS ALM_EQUIPID, 
 			ALM_STARTTIME,

@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.43485in</Width>
+              <Width>1.33068in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.81679in</Width>
+              <Width>0.61631in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.54605in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.63666in</Width>
+              <Width>0.58857in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -700,7 +700,7 @@
         <Top>0.06944in</Top>
         <Left>1mm</Left>
         <Height>0.94488in</Height>
-        <Width>3.43435in</Width>
+        <Width>3.08161in</Width>
         <Style />
       </Tablix>
     </ReportItems>
@@ -1276,8 +1276,8 @@
       </ReportItems>
       <Style />
     </PageHeader>
-    <PageHeight>297mm</PageHeight>
-    <PageWidth>210mm</PageWidth>
+    <PageHeight>27.94cm</PageHeight>
+    <PageWidth>21.59cm</PageWidth>
     <LeftMargin>20mm</LeftMargin>
     <RightMargin>20mm</RightMargin>
     <TopMargin>20mm</TopMargin>
@@ -1514,6 +1514,6 @@
   </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Mm</rd:ReportUnitType>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>c3fc41bd-6fab-4090-8db5-95be54415bb6</rd:ReportID>
 </Report>

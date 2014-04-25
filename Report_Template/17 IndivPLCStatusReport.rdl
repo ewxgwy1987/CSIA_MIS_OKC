@@ -2381,10 +2381,10 @@
     </PageHeader>
     <PageHeight>27.94cm</PageHeight>
     <PageWidth>21.59cm</PageWidth>
-    <LeftMargin>30mm</LeftMargin>
-    <RightMargin>30mm</RightMargin>
-    <TopMargin>20mm</TopMargin>
-    <BottomMargin>20mm</BottomMargin>
+    <LeftMargin>3cm</LeftMargin>
+    <RightMargin>3cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
     <Style>
       <Border>
         <Style>None</Style>
@@ -2395,7 +2395,7 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="PGLBHSDB">
-      <DataSourceReference>PGLBHSDB_NEW</DataSourceReference>
+      <DataSourceReference>IRELBHSDB</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>9a6c5141-08eb-4401-83b5-7c8aea807afa</rd:DataSourceID>
     </DataSource>

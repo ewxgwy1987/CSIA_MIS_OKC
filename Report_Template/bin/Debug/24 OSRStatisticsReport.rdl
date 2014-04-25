@@ -12,13 +12,13 @@
               <Width>0.98425in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.17005in</Width>
+              <Width>1.03187in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.62211in</Width>
+              <Width>1.16378in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.54754in</Width>
+              <Width>1.30796in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -520,7 +520,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -933,11 +932,11 @@
         <DataSetName>dsOSRStat</DataSetName>
         <Left>1mm</Left>
         <Height>1.19029in</Height>
-        <Width>7.02633in</Width>
+        <Width>6.19023in</Width>
         <Style />
       </Tablix>
     </ReportItems>
-    <Height>42.23338mm</Height>
+    <Height>32.4438mm</Height>
     <Style>
       <TopBorder>
         <Color>Black</Color>
@@ -947,7 +946,7 @@
       </BottomBorder>
     </Style>
   </Body>
-  <Width>180.92092mm</Width>
+  <Width>159.2251mm</Width>
   <Page>
     <PageHeader>
       <Height>50.5864mm</Height>
@@ -1001,7 +1000,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>1.32in</Top>
-              <Left>2.59875in</Left>
+              <Left>2.34875in</Left>
               <Height>6mm</Height>
               <Width>12mm</Width>
               <ZIndex>1</ZIndex>
@@ -1032,9 +1031,9 @@
                 </Paragraph>
               </Paragraphs>
               <Top>1.32in</Top>
-              <Left>3.11062in</Left>
+              <Left>2.86062in</Left>
               <Height>6mm</Height>
-              <Width>45mm</Width>
+              <Width>35mm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
@@ -1045,7 +1044,7 @@
               </Style>
             </Textbox>
             <Line Name="lnPHeaderVSeparator">
-              <Left>138.7mm</Left>
+              <Left>112.50625mm</Left>
               <Height>44.29473mm</Height>
               <Width>0mm</Width>
               <ZIndex>3</ZIndex>
@@ -1074,7 +1073,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.35436in</Top>
-              <Left>6.13062in</Left>
+              <Left>5.25562in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
               <ZIndex>4</ZIndex>
@@ -1103,7 +1102,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.63in</Top>
-              <Left>5.50062in</Left>
+              <Left>4.62562in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>5</ZIndex>
@@ -1132,7 +1131,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.07875in</Top>
-              <Left>5.50062in</Left>
+              <Left>4.62562in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>6</ZIndex>
@@ -1161,7 +1160,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.35436in</Top>
-              <Left>5.50062in</Left>
+              <Left>4.62562in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
               <ZIndex>7</ZIndex>
@@ -1191,7 +1190,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.62999in</Top>
-              <Left>6.13062in</Left>
+              <Left>5.25562in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
               <ZIndex>8</ZIndex>
@@ -1222,7 +1221,7 @@
                 </Paragraph>
               </Paragraphs>
               <Top>0.07875in</Top>
-              <Left>6.13062in</Left>
+              <Left>5.25562in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
               <ZIndex>9</ZIndex>
@@ -1257,7 +1256,7 @@
               <Top>2mm</Top>
               <Left>1.33875in</Left>
               <Height>6mm</Height>
-              <Width>88mm</Width>
+              <Width>73.6555mm</Width>
               <ZIndex>10</ZIndex>
               <Style>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1285,7 +1284,7 @@
               <Top>9mm</Top>
               <Left>1.33875in</Left>
               <Height>6mm</Height>
-              <Width>88mm</Width>
+              <Width>73.6555mm</Width>
               <ZIndex>11</ZIndex>
               <Style>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1298,7 +1297,7 @@
               <Top>32.525mm</Top>
               <Left>0cm</Left>
               <Height>0mm</Height>
-              <Width>138.7mm</Width>
+              <Width>112.50625mm</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -1327,7 +1326,7 @@
               <Top>1.32in</Top>
               <Left>0.71097in</Left>
               <Height>6mm</Height>
-              <Width>45mm</Width>
+              <Width>35mm</Width>
               <ZIndex>13</ZIndex>
               <Style>
                 <Border>
@@ -1364,7 +1363,7 @@
           <Top>1mm</Top>
           <Left>1mm</Left>
           <Height>44.29473mm</Height>
-          <Width>178.71787mm</Width>
+          <Width>157.23185mm</Width>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -1424,7 +1423,7 @@
           <Top>0.04896in</Top>
           <Left>0.05124in</Left>
           <Height>0.90209in</Height>
-          <Width>7.01446in</Width>
+          <Width>6.17836in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1447,12 +1446,12 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>20mm</LeftMargin>
-    <RightMargin>20mm</RightMargin>
-    <TopMargin>20mm</TopMargin>
-    <BottomMargin>20mm</BottomMargin>
+    <PageHeight>27.94cm</PageHeight>
+    <PageWidth>21.59cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
     <Style>
       <Border>
         <Style>None</Style>
