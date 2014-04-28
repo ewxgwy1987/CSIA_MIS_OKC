@@ -264,7 +264,7 @@ INSERT INTO MIS_SubsystemCatalog VALUES('Input Conveyors','TC3','TC3-3',0);
 INSERT INTO MIS_SubsystemCatalog VALUES('Input Conveyors','TC4','TC4-3',0);
 INSERT INTO MIS_SubsystemCatalog VALUES('Input Conveyors','TC5','TC5-4',0);
 INSERT INTO MIS_SubsystemCatalog VALUES('Input Conveyors','TC6','TC6-4',0);
-INSERT INTO MIS_SubsystemCatalog VALUES('Input Conveyors','TC7','TC7-5',0);
+INSERT INTO MIS_SubsystemCatalog VALUES('Input Conveyors','TC7','TC7-7',0);
 
 INSERT INTO MIS_SubsystemCatalog VALUES('Mainline','ML1','ML1-5',0);
 
