@@ -624,14 +624,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="FLIGHT">
+                    <Textbox Name="FLIGHT_NUMBER">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!FLIGHT.Value</Value>
+                              <Value>=Fields!FLIGHT_NUMBER.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -643,7 +643,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>FLIGHT</rd:DefaultName>
+                      <rd:DefaultName>FLIGHT_NUMBER</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1015,9 +1015,6 @@
                   <Group Name="FLIGHT_NUMBER" />
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!WEEKDAYS.Value</Value>
-                    </SortExpression>
-                    <SortExpression>
                       <Value>=Fields!STO.Value</Value>
                     </SortExpression>
                   </SortExpressions>
@@ -1036,7 +1033,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTestPermanentFlight</DataSetName>
+        <DataSetName>dsPermanentFlight</DataSetName>
         <Top>0.14195cm</Top>
         <Left>1mm</Left>
         <Height>1.1811in</Height>
@@ -1678,33 +1675,29 @@
     <DataSet Name="dsAirline">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
         <CommandText>--SELECT DISTINCT(AIRLINE) FROM FLIGHT_PLAN_SORTING 
 --	WHERE (SDO BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) --AND  CONVERT(VARCHAR(10), @DTTo,111)) AND AIRLINE IN (SELECT * --FROM DBO.RPT_GETAIRLINE(@UserID))
 
-select distinct airline from PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
+SELECT DISTINCT AIRLINE
+FROM FLIGHT_PLAN_SORTING FPS
+WHERE CONVERT(datetime,CONVERT(VARCHAR,FPS.SDO,103)+' '+DBO.RPT_GETFORMATTEDSTO(FPS.STO),103) BETWEEN @DTFrom AND @DTTo</CommandText>
       </Query>
       <Fields>
         <Field Name="AIRLINE">
-          <DataField>airline</DataField>
+          <DataField>AIRLINE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
     <DataSet Name="dsFlightNumber">
-      <Query>
-        <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>--SELECT DISTINCT(FLIGHT_NUMBER) AS 'FLIGHTNUMBER' FROM --FLIGHT_PLAN_SORTING WHERE AIRLINE IN (@Airline) AND (SDO --BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) AND  CONVERT--(VARCHAR(10), @DTTo,111))
-
-select distinct FLIGHT from PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="FLIGHT">
-          <DataField>FLIGHT</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="dsMain">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
         <QueryParameters>
@@ -1717,49 +1710,18 @@ select distinct FLIGHT from PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
           <QueryParameter Name="@Airline">
             <Value>=Parameters!Airline.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@FlightNumber">
-            <Value>=Parameters!FlightNumber.Value</Value>
-          </QueryParameter>
         </QueryParameters>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>stp_RPT_FLIGHTBAGCOUNT_GWY</CommandText>
+        <CommandText>--SELECT DISTINCT(FLIGHT_NUMBER) AS 'FLIGHTNUMBER' FROM --FLIGHT_PLAN_SORTING WHERE AIRLINE IN (@Airline) AND (SDO --BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) AND  CONVERT--(VARCHAR(10), @DTTo,111))
+
+SELECT DISTINCT FPS.FLIGHT_NUMBER
+FROM FLIGHT_PLAN_SORTING FPS
+WHERE CONVERT(datetime,CONVERT(VARCHAR,FPS.SDO,103)+' '+DBO.RPT_GETFORMATTEDSTO(FPS.STO),103) BETWEEN @DTFrom AND @DTTo
+AND FPS.AIRLINE IN (@Airline) </CommandText>
       </Query>
       <Fields>
-        <Field Name="AIRLINE">
-          <DataField>AIRLINE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="FLIGHT_NUMBER">
           <DataField>FLIGHT_NUMBER</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESTINATION">
-          <DataField>DESTINATION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="COUNT">
-          <DataField>COUNT</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BAG_COUNT">
-          <DataField>BAG COUNT</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BAG_NOT_SEEN">
-          <DataField>BAG NOT SEEN</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BAG_SEEN">
-          <DataField>BAG SEEN</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="EARLY_BAG">
-          <DataField>EARLY BAG</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="LATE_BAG">
-          <DataField>LATE BAG</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -1803,18 +1765,33 @@ select distinct FLIGHT from PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="dsTestPermanentFlight">
+    <DataSet Name="dsPermanentFlight">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <CommandText>SELECT * FROM PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@DTFrom">
+            <Value>=Parameters!DTFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@DTTo">
+            <Value>=Parameters!DTTo.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@AIRLINES">
+            <Value>=Parameters!Airline.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@FLIGHTS">
+            <Value>=Parameters!FlightNumber.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>stp_RPT_OKC_PermanentFlight</CommandText>
       </Query>
       <Fields>
         <Field Name="AIRLINE">
           <DataField>AIRLINE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="FLIGHT">
-          <DataField>FLIGHT</DataField>
+        <Field Name="FLIGHT_NUMBER">
+          <DataField>FLIGHT_NUMBER</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="WEEKDAYS">
@@ -1823,7 +1800,7 @@ select distinct FLIGHT from PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
         </Field>
         <Field Name="STO">
           <DataField>STO</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="RESOURCES">
           <DataField>RESOURCES</DataField>
@@ -1924,8 +1901,8 @@ select distinct FLIGHT from PRT_TEST_OKC13_PERMANENTFLIGHT</CommandText>
       <ValidValues>
         <DataSetReference>
           <DataSetName>dsFlightNumber</DataSetName>
-          <ValueField>FLIGHT</ValueField>
-          <LabelField>FLIGHT</LabelField>
+          <ValueField>FLIGHT_NUMBER</ValueField>
+          <LabelField>FLIGHT_NUMBER</LabelField>
         </DataSetReference>
       </ValidValues>
       <MultiValue>true</MultiValue>
