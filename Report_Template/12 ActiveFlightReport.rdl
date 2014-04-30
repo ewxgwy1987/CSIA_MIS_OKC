@@ -1506,139 +1506,16 @@
   <Width>168.0449mm</Width>
   <Page>
     <PageHeader>
-      <Height>49.525mm</Height>
+      <Height>55.34583mm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
         <Rectangle Name="rectangle1">
           <ReportItems>
-            <Textbox Name="lblFrom">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>From :</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.195in</Top>
-              <Left>0.07875in</Left>
-              <Height>6mm</Height>
-              <Width>15mm</Width>
-              <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="lblTo">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>To :</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.195in</Top>
-              <Left>2.59875in</Left>
-              <Height>6mm</Height>
-              <Width>12mm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="FromDateTime">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Format(Parameters!DTFrom.Value, Parameters!DFormat.Value &amp; " " &amp; Parameters!TFormat.Value)</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <Format>G</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.195in</Top>
-              <Left>0.71097in</Left>
-              <Height>6mm</Height>
-              <Width>45mm</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="ToDateTime">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Format(Parameters!DTTo.Value, Parameters!DFormat.Value &amp; " " &amp; Parameters!TFormat.Value)</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <Format>G</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.195in</Top>
-              <Left>3.11062in</Left>
-              <Height>6mm</Height>
-              <Width>45mm</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Line Name="lnPHeaderVSeparator">
               <Left>126mm</Left>
-              <Height>46.76111mm</Height>
+              <Height>52.58194mm</Height>
               <Width>0mm</Width>
-              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -1667,7 +1544,7 @@
               <Left>5.63062in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>1</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1696,7 +1573,7 @@
               <Left>5.00062in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>2</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1725,7 +1602,7 @@
               <Left>5.00062in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1754,7 +1631,7 @@
               <Left>5.00062in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1784,7 +1661,7 @@
               <Left>5.63062in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
-              <ZIndex>9</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1815,7 +1692,7 @@
               <Left>5.63062in</Left>
               <Height>6mm</Height>
               <Width>23.00012mm</Width>
-              <ZIndex>10</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1848,7 +1725,7 @@
               <Left>1.33875in</Left>
               <Height>6mm</Height>
               <Width>88mm</Width>
-              <ZIndex>11</ZIndex>
+              <ZIndex>7</ZIndex>
               <Style>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -1876,7 +1753,7 @@
               <Left>1.33875in</Left>
               <Height>6.00074mm</Height>
               <Width>88mm</Width>
-              <ZIndex>12</ZIndex>
+              <ZIndex>8</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1886,10 +1763,10 @@
               </Style>
             </Textbox>
             <Line Name="line1">
-              <Top>29.35mm</Top>
+              <Top>32.525mm</Top>
               <Height>0mm</Height>
               <Width>126mm</Width>
-              <ZIndex>13</ZIndex>
+              <ZIndex>9</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -1905,7 +1782,7 @@
               <Left>2.00025mm</Left>
               <Height>27.47222mm</Height>
               <Width>30mm</Width>
-              <ZIndex>14</ZIndex>
+              <ZIndex>10</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1918,7 +1795,12 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Join(Parameters!Airline.Value,",")</Value>
+                      <Value>=IIF(	LEN(Join(Parameters!Airline.Value,","))&gt;45,
+		Left(	Join(Parameters!Airline.Value,","),
+				InStrRev(LEFT( Join(Parameters!Airline.Value,","),45), ","	)
+			) &amp; " ...",
+		Join(Parameters!Airline.Value,",")
+	)</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <Format>G</Format>
@@ -1930,11 +1812,11 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.50066in</Top>
+              <Top>1.41316in</Top>
               <Left>0.71097in</Left>
               <Height>6mm</Height>
-              <Width>45mm</Width>
-              <ZIndex>15</ZIndex>
+              <Width>103.94561mm</Width>
+              <ZIndex>11</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1962,11 +1844,11 @@
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>1.50066in</Top>
+              <Top>1.41316in</Top>
               <Left>0.07875in</Left>
               <Height>6mm</Height>
               <Width>15mm</Width>
-              <ZIndex>16</ZIndex>
+              <ZIndex>12</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -1991,11 +1873,11 @@
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>1.50066in</Top>
-              <Left>2.59875in</Left>
+              <Top>1.71882in</Top>
+              <Left>0.07875in</Left>
               <Height>6mm</Height>
-              <Width>12mm</Width>
-              <ZIndex>17</ZIndex>
+              <Width>15mm</Width>
+              <ZIndex>13</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -2010,7 +1892,12 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Join(Parameters!FlightNumber.Value,",")</Value>
+                      <Value>=IIF(	LEN(Join(Parameters!FlightNumber.Value,","))&gt;45,
+		Left(	Join(Parameters!FlightNumber.Value,","),
+				InStrRev(LEFT( Join(Parameters!FlightNumber.Value,","),45), ","	)
+			) &amp; " ...",
+		Join(Parameters!FlightNumber.Value,",")
+	)</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <Format>G</Format>
@@ -2022,11 +1909,11 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.50066in</Top>
-              <Left>3.11062in</Left>
+              <Top>1.71882in</Top>
+              <Left>0.71097in</Left>
               <Height>6mm</Height>
-              <Width>45mm</Width>
-              <ZIndex>18</ZIndex>
+              <Width>103.94561mm</Width>
+              <ZIndex>14</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -2042,7 +1929,7 @@
           <DataElementOutput>ContentsOnly</DataElementOutput>
           <Top>1mm</Top>
           <Left>1mm</Left>
-          <Height>46.76111mm</Height>
+          <Height>52.58194mm</Height>
           <Width>166.01787mm</Width>
           <Style>
             <Border>
@@ -2127,20 +2014,13 @@
     <DataSet Name="dsAirline">
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
         <CommandText>--SELECT DISTINCT(AIRLINE) FROM FLIGHT_PLAN_SORTING 
 --	WHERE (SDO BETWEEN CONVERT(VARCHAR(10), @DTFrom,111) --AND  CONVERT(VARCHAR(10), @DTTo,111)) AND AIRLINE IN (SELECT * --FROM DBO.RPT_GETAIRLINE(@UserID))
 
-SELECT DISTINCT AIRLINE
-FROM FLIGHT_PLAN_SORTING FPS
-WHERE CONVERT(datetime,CONVERT(VARCHAR,FPS.SDO,103)+' '+DBO.RPT_GETFORMATTEDSTO(FPS.STO),103) BETWEEN @DTFrom AND @DTTo</CommandText>
+SELECT DISTINCT(AIRLINE)
+FROM FLIGHT_PLAN_SORTING 
+WHERE SDO BETWEEN CONVERT(VARCHAR(10), DATEADD(DAY,-1,GETDATE()),111) 
+AND  CONVERT(VARCHAR(10), DATEADD(DAY,1,GETDATE()),111) </CommandText>
       </Query>
       <Fields>
         <Field Name="AIRLINE">
@@ -2153,12 +2033,6 @@ WHERE CONVERT(datetime,CONVERT(VARCHAR,FPS.SDO,103)+' '+DBO.RPT_GETFORMATTEDSTO(
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="@Airline">
             <Value>=Parameters!Airline.Value</Value>
           </QueryParameter>
@@ -2167,7 +2041,8 @@ WHERE CONVERT(datetime,CONVERT(VARCHAR,FPS.SDO,103)+' '+DBO.RPT_GETFORMATTEDSTO(
 
 SELECT DISTINCT FPS.FLIGHT_NUMBER
 FROM FLIGHT_PLAN_SORTING FPS
-WHERE CONVERT(datetime,CONVERT(VARCHAR,FPS.SDO,103)+' '+DBO.RPT_GETFORMATTEDSTO(FPS.STO),103) BETWEEN @DTFrom AND @DTTo
+WHERE  SDO BETWEEN CONVERT(VARCHAR(10), DATEADD(DAY,-1,GETDATE()),111) 
+AND  CONVERT(VARCHAR(10), DATEADD(DAY,1,GETDATE()),111) 
 AND FPS.AIRLINE IN (@Airline) </CommandText>
       </Query>
       <Fields>
@@ -2221,12 +2096,6 @@ AND FPS.AIRLINE IN (@Airline) </CommandText>
       <Query>
         <DataSourceName>PGLBHSDB</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@DTFrom">
-            <Value>=Parameters!DTFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@DTTo">
-            <Value>=Parameters!DTTo.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="@AIRLINES">
             <Value>=Parameters!Airline.Value</Value>
           </QueryParameter>
@@ -2305,29 +2174,6 @@ AND FPS.AIRLINE IN (@Airline) </CommandText>
           <LabelField>DATE_BASIC_LABEL</LabelField>
         </DataSetReference>
       </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="DTFrom">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>=iif(Parameters!DBasic.Value="15MINUTES",DateAdd(DateInterval.Minute,-15,Now),
-	iif(Parameters!DBasic.Value="1HOUR",DateAdd(DateInterval.Hour,-1,Now),
-	iif(Parameters!DBasic.Value="1DAY",DateAdd(DateInterval.Day,-1,Now),
-	iif(Parameters!DBasic.Value="1WEEK",DateAdd(DateInterval.Day,-7,Now),
-	iif(Parameters!DBasic.Value="1MONTH",DateAdd(DateInterval.Month,-1,Now),
-	iif(Parameters!DBasic.Value="1YEAR",DateAdd(DateInterval.Year,-1,Now),Now))))))</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>From :</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="DTTo">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>=Now</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>To :</Prompt>
     </ReportParameter>
     <ReportParameter Name="UserID">
       <DataType>String</DataType>

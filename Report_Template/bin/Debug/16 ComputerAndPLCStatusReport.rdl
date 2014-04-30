@@ -2936,7 +2936,7 @@ ORDER BY STA.LOCATION</CommandText>
         <DataSourceName>PGLBHSDB</DataSourceName>
         <CommandText>SELECT APP_CODE, LIVE_STATUS_TYPE
 FROM APP_LIVE_MONITORING
-WHERE APP_CODE LIKE 'BHSDB%' OR APP_CODE LIKE 'MDS%' OR APP_CODE LIKE 'SAC%'</CommandText>
+--WHERE APP_CODE LIKE 'BHSDB%' OR APP_CODE LIKE 'MDS%' OR APP_CODE LIKE 'SAC%'</CommandText>
       </Query>
       <Fields>
         <Field Name="APP_CODE">
