@@ -1157,7 +1157,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!Interval.Value</Value>
+                      <Value>=Parameters!Interval.Value &amp; "mins"</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <Format>G</Format>
