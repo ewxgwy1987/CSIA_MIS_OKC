@@ -117,6 +117,6 @@ BEGIN
 	FROM #EDS_OPER_TEMP EOT;
 END
 
---DECLARE	@DTFrom datetime='2014/1/10 18:45:06';
+--DECLARE @DTFrom datetime='2014/1/10 18:45:06';
 --DECLARE @DTTo datetime='2014/1/11 18:45:06';
---EXEC stp_RPT_CLT_EDSOperation @DTFrom,@DTTo
+--EXEC stp_RPT_OKC_EDSOperation @DTFrom,@DTTo
