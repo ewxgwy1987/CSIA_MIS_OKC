@@ -703,7 +703,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!STO.Value,Parameters!TFormat.Value)</Value>
+                              <Value>=Format(TimeValue(Fields!STO.Value),Parameters!TFormat.Value)
+'=Format(Fields!STO.Value,Parameters!TFormat.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -728,6 +729,7 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>

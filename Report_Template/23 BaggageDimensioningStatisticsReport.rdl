@@ -1095,16 +1095,16 @@
               <Width>1.22659in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32126in</Width>
+              <Width>1.55872in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.27689in</Width>
+              <Width>1.55513in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.43903in</Width>
+              <Width>1.10041in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.27804in</Width>
+              <Width>1.10096in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1514,6 +1514,7 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1714,22 +1715,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value xml:space="preserve">               </Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
                               <Value>=Code.MyTimeFormat(sum(Fields!FAULT_DUARTION.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value xml:space="preserve">              </Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1903,7 +1892,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
